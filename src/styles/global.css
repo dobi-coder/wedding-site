@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@import url("https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@400;500;600&display=swap");
+
+:root {
+	--ivory: #f8f2e9;
+	--paper: #fcf8f1;
+	--terracotta: #d9825d;
+	--terracotta-dark: #bd6948;
+	--sage: #737761;
+	--olive: #555847;
+	--text: #46483d;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	background: var(--ivory);
+	color: var(--text);
+	font-family: "Montserrat", sans-serif;
+}
+
+.font-serif {
+	font-family: "Cormorant Garamond", serif;
+}
+
+.font-script {
+	font-family: "Allura", cursive;
+}

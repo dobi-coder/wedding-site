@@ -1,0 +1,152 @@
+---
+import "../styles/global.css";
+---
+
+<html lang="fr">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="description" content="Le mariage de Jeanne & Maxime — 4 septembre 2027" />
+		<title>Jeanne & Maxime — Notre mariage</title>
+	</head>
+
+	<body>
+		<main class="relative min-h-screen overflow-hidden">
+			<!-- Decorative border -->
+			<div
+				class="pointer-events-none fixed inset-4 z-20 border border-[var(--terracotta)]/50 sm:inset-6"
+			></div>
+
+			<!-- Hero -->
+			<section
+				class="relative flex min-h-screen items-center justify-center px-8 py-24 sm:px-16"
+			>
+				<div class="relative z-10 mx-auto max-w-4xl text-center">
+					<p
+						class="font-serif text-sm uppercase tracking-[0.45em] text-[var(--sage)] sm:text-base"
+					>
+						Notre mariage
+					</p>
+
+					<div class="my-6 text-7xl text-[var(--terracotta)] sm:text-9xl">
+						<span class="font-script">Jeanne</span>
+						<span class="font-serif text-4xl sm:text-5xl">&amp;</span>
+						<span class="font-script">Maxime</span>
+					</div>
+
+					<div class="mx-auto my-8 h-px w-20 bg-[var(--terracotta)]/60"></div>
+
+					<p
+						class="font-serif text-2xl uppercase tracking-[0.25em] text-[var(--olive)] sm:text-3xl"
+					>
+						Samedi 4 septembre 2027
+					</p>
+
+					<p class="mt-5 font-serif text-lg italic text-[var(--sage)] sm:text-xl">
+						Deux jours à célébrer ensemble
+					</p>
+
+					<a
+						href="#bienvenue"
+						class="mt-14 inline-block border border-[var(--terracotta)] px-7 py-3
+						font-serif text-lg text-[var(--terracotta-dark)]
+						transition-all duration-300
+						hover:bg-[var(--terracotta)] hover:text-[var(--paper)]"
+					>
+						Découvrir
+					</a>
+				</div>
+
+				<!-- Decorative botanical corner placeholders -->
+				<div
+					class="pointer-events-none absolute -right-20 -top-10 h-72 w-72 rounded-full bg-[var(--sage)]/10 blur-3xl"
+				></div>
+
+				<div
+					class="pointer-events-none absolute -bottom-20 -left-20 h-80 w-80 rounded-full bg-[var(--terracotta)]/10 blur-3xl"
+				></div>
+			</section>
+
+			<!-- Welcome -->
+			<section
+				id="bienvenue"
+				class="relative px-8 py-32 sm:px-16"
+			>
+				<div class="mx-auto max-w-3xl text-center">
+					<p
+						class="font-serif text-sm uppercase tracking-[0.4em] text-[var(--sage)]"
+					>
+						Nous avons hâte
+					</p>
+
+					<h2
+						class="mt-5 font-serif text-5xl text-[var(--olive)] sm:text-6xl"
+					>
+						De vous retrouver
+					</h2>
+
+					<div class="mx-auto my-8 h-px w-16 bg-[var(--terracotta)]/60"></div>
+
+					<p class="font-serif text-xl leading-relaxed text-[var(--text)] sm:text-2xl">
+						Nous sommes très heureux de pouvoir partager ces deux journées
+						avec vous. Retrouvez ici toutes les informations pour préparer
+						ce beau week-end à nos côtés.
+					</p>
+				</div>
+			</section>
+
+			<!-- Navigation cards -->
+			<section class="px-8 pb-32 sm:px-16">
+				<div class="mx-auto grid max-w-5xl gap-6 sm:grid-cols-2">
+					<a
+						href="#"
+						class="group border border-[var(--sage)]/30 bg-[var(--paper)]/50 p-10 text-center transition-all duration-300 hover:-translate-y-1 hover:border-[var(--terracotta)]"
+					>
+						<p class="font-serif text-3xl text-[var(--olive)]">
+							Le mariage
+						</p>
+						<p class="mt-3 text-sm tracking-wide text-[var(--sage)]">
+							Programme &amp; déroulement
+						</p>
+					</a>
+
+					<a
+						href="#"
+						class="group border border-[var(--sage)]/30 bg-[var(--paper)]/50 p-10 text-center transition-all duration-300 hover:-translate-y-1 hover:border-[var(--terracotta)]"
+					>
+						<p class="font-serif text-3xl text-[var(--olive)]">
+							Le lieu
+						</p>
+						<p class="mt-3 text-sm tracking-wide text-[var(--sage)]">
+							Accès &amp; informations pratiques
+						</p>
+					</a>
+
+					<a
+						href="#"
+						class="group border border-[var(--sage)]/30 bg-[var(--paper)]/50 p-10 text-center transition-all duration-300 hover:-translate-y-1 hover:border-[var(--terracotta)]"
+					>
+						<p class="font-serif text-3xl text-[var(--olive)]">
+							Le week-end
+						</p>
+						<p class="mt-3 text-sm tracking-wide text-[var(--sage)]">
+							Hébergement &amp; bonnes adresses
+						</p>
+					</a>
+
+					<a
+						href="#"
+						class="group border border-[var(--terracotta)] bg-[var(--paper)]/50 p-10 text-center transition-all duration-300 hover:-translate-y-1 hover:bg-[var(--terracotta)] hover:text-white"
+					>
+						<p class="font-serif text-3xl text-[var(--terracotta-dark)] group-hover:text-white">
+							RSVP
+						</p>
+						<p class="mt-3 text-sm tracking-wide text-[var(--sage)] group-hover:text-white/80">
+							Confirmer votre présence
+						</p>
+					</a>
+				</div>
+			</section>
+		</main>
+	</body>
+</html>
