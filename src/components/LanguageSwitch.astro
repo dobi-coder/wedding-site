@@ -1,0 +1,41 @@
+---
+interface Props {
+	currentLanguage: "fr" | "en";
+	frenchUrl: string;
+	englishUrl: string;
+}
+
+const {
+	currentLanguage,
+	frenchUrl,
+	englishUrl,
+} = Astro.props;
+---
+
+<div class="absolute right-10 top-10 z-30 flex items-center gap-2 font-serif text-sm uppercase tracking-[0.2em]">
+	{
+		currentLanguage === "fr" ? (
+			<>
+				<span class="text-[var(--olive)]">FR</span>
+				<span class="text-[var(--sage)]/40">|</span>
+				<a
+					href={englishUrl}
+					class="text-[var(--terracotta-dark)] transition-colors hover:text-[var(--terracotta)]"
+				>
+					EN
+				</a>
+			</>
+		) : (
+			<>
+				<a
+					href={frenchUrl}
+					class="text-[var(--terracotta-dark)] transition-colors hover:text-[var(--terracotta)]"
+				>
+					FR
+				</a>
+				<span class="text-[var(--sage)]/40">|</span>
+				<span class="text-[var(--olive)]">EN</span>
+			</>
+		)
+	}
+</div>

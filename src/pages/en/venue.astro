@@ -1,0 +1,73 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+	title="Le lieu — Jeanne & Maxime"
+	description="Découvrez le Château de Saint-Cyr-du-Gault, lieu de notre mariage."
+	language="fr"
+	frenchUrl="/lieu"
+	englishUrl="/en/venue"
+	maxWidth="max-w-5xl"
+>
+	<a
+		href="/#menu"
+		class="font-serif text-sm uppercase tracking-[0.3em] text-[var(--sage)] transition-colors hover:text-[var(--terracotta)]"
+	>
+		← Retour
+	</a>
+
+	<header class="py-16 text-center sm:py-20">
+		<p class="font-serif text-sm uppercase tracking-[0.4em] text-[var(--sage)]">
+			Le domaine
+		</p>
+
+		<h1 class="mt-5 font-serif text-5xl text-[var(--olive)] sm:text-7xl">
+			Le lieu
+		</h1>
+
+		<div class="mx-auto my-8 h-px w-16 bg-[var(--terracotta)]/60"></div>
+
+		<p class="font-script text-4xl text-[var(--terracotta)] sm:text-5xl">
+			Château de Saint-Cyr-du-Gault
+		</p>
+	</header>
+
+	<section>
+		<div class="overflow-hidden border border-[var(--terracotta)]/30 bg-[var(--paper)] p-2">
+			<img
+				src="/images/chateau-saint-cyr.jpg"
+				alt="Château de Saint-Cyr-du-Gault"
+				class="h-[350px] w-full object-cover sm:h-[500px]"
+			/>
+		</div>
+	</section>
+
+	<section class="mx-auto max-w-3xl py-16 text-center sm:py-20">
+		<p class="font-serif text-2xl leading-relaxed text-[var(--olive)] sm:text-3xl">
+			C'est dans ce magnifique château au cœur du Loir-et-Cher que nous
+			aurons le plaisir de vous retrouver pour célébrer notre mariage.
+		</p>
+
+		<div class="mx-auto my-10 h-px w-12 bg-[var(--terracotta)]/60"></div>
+
+		<p class="text-sm uppercase tracking-[0.25em] text-[var(--sage)]">
+			34 Rue de la République
+			<br />
+			41190 Saint-Cyr-du-Gault
+			<br />
+			France
+		</p>
+
+		<a
+			href="https://www.google.com/maps/search/?api=1&query=Château+de+Saint-Cyr-du-Gault,+34+Rue+de+la+République,+41190+Saint-Cyr-du-Gault,+France"
+			target="_blank"
+			rel="noopener noreferrer"
+			class="mt-8 inline-block border border-[var(--terracotta)] px-7 py-3 font-serif text-lg text-[var(--terracotta-dark)] transition-all duration-300 hover:bg-[var(--terracotta)] hover:text-white"
+		>
+			Voir sur Google Maps
+		</a>
+	</section>
+
+	<!-- Keep your current Accès section below this -->
+</BaseLayout>

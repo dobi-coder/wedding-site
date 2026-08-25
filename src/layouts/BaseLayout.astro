@@ -1,0 +1,55 @@
+---
+import "../styles/global.css";
+import LanguageSwitch from "../components/LanguageSwitch.astro";
+
+interface Props {
+	title: string;
+	description?: string;
+	language?: "fr" | "en";
+	frenchUrl?: string;
+	englishUrl?: string;
+	maxWidth?: string;
+}
+
+const {
+	title,
+	description = "Le mariage de Jeanne & Maxime",
+	language = "fr",
+	frenchUrl = "/",
+	englishUrl = "/en/",
+	maxWidth = "max-w-5xl",
+} = Astro.props;
+---
+
+<html lang={language}>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="description" content={description} />
+
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" />
+
+		<title>{title}</title>
+	</head>
+
+	<body class="bg-[var(--ivory)] text-[var(--text)]">
+		<main class="relative min-h-screen px-8 py-24 sm:px-16">
+
+			<div
+				class="pointer-events-none fixed inset-4 z-20 border border-[var(--terracotta)]/50 sm:inset-6"
+			></div>
+
+			<LanguageSwitch
+				currentLanguage={language}
+				frenchUrl={frenchUrl}
+				englishUrl={englishUrl}
+			/>
+
+			<div class={`mx-auto ${maxWidth}`}>
+				<slot />
+			</div>
+
+		</main>
+	</body>
+</html>
