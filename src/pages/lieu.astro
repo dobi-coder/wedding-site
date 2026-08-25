@@ -6,67 +6,213 @@ import "../styles/global.css";
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width" />
+		<meta
+			name="description"
+			content="Découvrez le Château de Saint-Cyr-du-Gault, lieu de notre mariage."
+		/>
 		<title>Le lieu — Jeanne & Maxime</title>
 	</head>
 
 	<body class="bg-[var(--ivory)] text-[var(--text)]">
 		<main class="relative min-h-screen px-8 py-24 sm:px-16">
+
+			<!-- Decorative border -->
 			<div
-				class="pointer-events-none fixed inset-4 border border-[var(--terracotta)]/50 sm:inset-6"
+				class="pointer-events-none fixed inset-4 z-20 border border-[var(--terracotta)]/50 sm:inset-6"
 			></div>
 
-			<div class="mx-auto max-w-4xl">
+			<div class="mx-auto max-w-5xl">
+
+				<!-- Back -->
 				<a
 					href="/#menu"
-					class="font-serif text-sm uppercase tracking-[0.3em] text-[var(--sage)]"
+					class="font-serif text-sm uppercase tracking-[0.3em] text-[var(--sage)] transition-colors hover:text-[var(--terracotta)]"
 				>
 					← Retour
 				</a>
 
-				<header class="py-20 text-center">
-					<p class="font-serif text-sm uppercase tracking-[0.4em] text-[var(--sage)]">
+				<!-- Header -->
+				<header class="py-16 text-center sm:py-20">
+					<p
+						class="font-serif text-sm uppercase tracking-[0.4em] text-[var(--sage)]"
+					>
 						Le domaine
 					</p>
 
-					<h1 class="mt-5 font-serif text-6xl text-[var(--olive)] sm:text-7xl">
+					<h1
+						class="mt-5 font-serif text-5xl text-[var(--olive)] sm:text-7xl"
+					>
 						Le lieu
 					</h1>
 
-					<div class="mx-auto my-8 h-px w-16 bg-[var(--terracotta)]/60"></div>
+					<div
+						class="mx-auto my-8 h-px w-16 bg-[var(--terracotta)]/60"
+					></div>
+
+					<p
+						class="font-script text-4xl text-[var(--terracotta)] sm:text-5xl"
+					>
+						Château de Saint-Cyr-du-Gault
+					</p>
 				</header>
 
-				<section class="space-y-10">
-					<div class="border border-[var(--sage)]/25 bg-[var(--paper)]/60 p-10 text-center">
-						<h2 class="font-serif text-4xl text-[var(--olive)]">
-							Nom du domaine
-						</h2>
-
-						<p class="mt-4 font-serif text-xl text-[var(--sage)]">
-							Adresse du lieu
-						</p>
-
-						<p class="mt-6 leading-relaxed">
-							Ajoutez ici une courte présentation du lieu, son histoire ou
-							ce qui vous a donné envie de vous y marier.
-						</p>
-					</div>
-
-					<div class="grid gap-8 md:grid-cols-2">
-						<div>
-							<p class="font-serif text-2xl text-[var(--olive)]">Accès</p>
-							<p class="mt-3 leading-relaxed text-[var(--sage)]">
-								Informations sur l'accès en voiture, train ou taxi.
-							</p>
-						</div>
-
-						<div>
-							<p class="font-serif text-2xl text-[var(--olive)]">Parking</p>
-							<p class="mt-3 leading-relaxed text-[var(--sage)]">
-								Précisez ici les possibilités de stationnement.
-							</p>
-						</div>
+				<!-- Château photo -->
+				<section>
+					<div
+						class="overflow-hidden border border-[var(--terracotta)]/30 bg-[var(--paper)] p-2"
+					>
+						<img
+							src="/images/chateau-saint-cyr.jpg"
+							alt="Château de Saint-Cyr-du-Gault"
+							class="h-[350px] w-full object-cover sm:h-[500px]"
+						/>
 					</div>
 				</section>
+
+				<!-- Introduction -->
+				<section class="mx-auto max-w-3xl py-16 text-center sm:py-20">
+					<p
+						class="font-serif text-2xl leading-relaxed text-[var(--olive)] sm:text-3xl"
+					>
+						C'est dans ce magnifique château au cœur du
+						Loir-et-Cher que nous aurons le plaisir de vous
+						retrouver pour célébrer notre mariage.
+					</p>
+
+					<div
+						class="mx-auto my-10 h-px w-12 bg-[var(--terracotta)]/60"
+					></div>
+
+					<p class="text-sm uppercase tracking-[0.25em] text-[var(--sage)]">
+						34 Rue de la République
+						<br />
+						41190 Saint-Cyr-du-Gault
+						<br />
+						France
+					</p>
+
+                    <a
+                        href="https://www.google.com/maps/search/?api=1&query=Château+de+Saint-Cyr-du-Gault,+34+Rue+de+la+République,+41190+Saint-Cyr-du-Gault,+France"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="mt-8 inline-block border border-[var(--terracotta)] px-7 py-3 font-serif text-lg text-[var(--terracotta-dark)] transition-all duration-300 hover:bg-[var(--terracotta)] hover:text-white"
+                    >
+                        Voir sur Google Maps
+                    </a>
+				</section>
+
+				<!-- Practical information -->
+				<section class="py-16">
+                    <div class="text-center">
+                        <p class="font-serif text-sm uppercase tracking-[0.3em] text-[var(--terracotta)]">
+                            Venir au château
+                        </p>
+
+                        <h2 class="mt-4 font-serif text-4xl text-[var(--olive)]">
+                            Accès
+                        </h2>
+
+                        <p class="mx-auto mt-5 max-w-2xl leading-relaxed text-[var(--sage)]">
+                            Voici quelques itinéraires conseillés pour rejoindre le château.
+                            Les horaires précis seront à vérifier à l'approche du mariage.
+                        </p>
+                    </div>
+
+                    <div class="mt-12 grid gap-6 lg:grid-cols-3">
+
+                        <!-- Paris -->
+                        <div class="border border-[var(--sage)]/25 bg-[var(--paper)]/60 p-8">
+                            <div class="text-3xl text-[var(--terracotta)]">
+                                🚆
+                            </div>
+
+                            <h3 class="mt-5 font-serif text-3xl text-[var(--olive)]">
+                                Depuis Paris
+                            </h3>
+
+                            <p class="mt-5 leading-relaxed text-[var(--sage)]">
+                                Le plus simple est de prendre un train depuis
+                                <strong>Paris Austerlitz</strong> en direction de
+                                <strong>Blois–Chambord</strong> ou
+                                <strong>Onzain–Chaumont-sur-Loire</strong>.
+                            </p>
+
+                            <p class="mt-4 leading-relaxed text-[var(--sage)]">
+                                Le trajet ferroviaire prend généralement autour de
+                                <strong>1 h 30 à 2 h</strong>, selon le train choisi.
+                            </p>
+
+                            <p class="mt-4 text-sm leading-relaxed text-[var(--sage)]">
+                                Une voiture ou un taxi sera ensuite nécessaire pour rejoindre
+                                le château.
+                            </p>
+                        </div>
+
+                        <!-- Lille -->
+                        <div class="border border-[var(--sage)]/25 bg-[var(--paper)]/60 p-8">
+                            <div class="text-3xl text-[var(--terracotta)]">
+                                🚆
+                            </div>
+
+                            <h3 class="mt-5 font-serif text-3xl text-[var(--olive)]">
+                                Depuis Lille
+                            </h3>
+
+                            <p class="mt-5 leading-relaxed text-[var(--sage)]">
+                                Des trajets en train permettent de rejoindre
+                                <strong>Blois–Chambord</strong>, généralement avec une ou deux
+                                correspondances.
+                            </p>
+
+                            <p class="mt-4 leading-relaxed text-[var(--sage)]">
+                                Comptez environ <strong>3 h 40 à 4 h 30</strong> de trajet
+                                selon les correspondances.
+                            </p>
+
+                            <p class="mt-4 text-sm leading-relaxed text-[var(--sage)]">
+                                Depuis Blois, prévoyez ensuite une voiture ou un taxi jusqu'au
+                                château.
+                            </p>
+                        </div>
+
+                        <!-- Cambridge -->
+                        <div class="border border-[var(--sage)]/25 bg-[var(--paper)]/60 p-8">
+                            <div class="flex gap-3 text-3xl text-[var(--terracotta)]">
+                                <span>🚆</span>
+                                <span>✈️</span>
+                            </div>
+
+                            <h3 class="mt-5 font-serif text-3xl text-[var(--olive)]">
+                                Depuis Cambridge
+                            </h3>
+
+                            <p class="mt-5 leading-relaxed text-[var(--sage)]">
+                                L'option la plus confortable est de rejoindre
+                                <strong>London St Pancras</strong>, puis de prendre
+                                <strong>l'Eurostar jusqu'à Paris</strong>.
+                            </p>
+
+                            <p class="mt-4 leading-relaxed text-[var(--sage)]">
+                                L'Eurostar relie Londres à Paris en environ
+                                <strong>2 h 16</strong>.
+                            </p>
+
+                            <p class="mt-4 leading-relaxed text-[var(--sage)]">
+                                Depuis Paris, poursuivez ensuite en train vers
+                                <strong>Blois–Chambord</strong> ou
+                                <strong>Onzain–Chaumont-sur-Loire</strong>.
+                            </p>
+
+                            <p class="mt-4 text-sm leading-relaxed text-[var(--sage)]">
+                                L'avion peut également être envisagé, mais nous préciserons
+                                plus tard l'option la plus pratique selon les horaires disponibles
+                                pour septembre 2027.
+                            </p>
+                        </div>
+
+                    </div>
+                </section>
+
 			</div>
 		</main>
 	</body>
