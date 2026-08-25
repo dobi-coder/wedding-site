@@ -1,0 +1,123 @@
+---
+import "../styles/global.css";
+---
+
+<html lang="fr">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>RSVP — Jeanne & Maxime</title>
+	</head>
+
+	<body class="bg-[var(--ivory)] text-[var(--text)]">
+		<main class="relative min-h-screen px-8 py-24 sm:px-16">
+			<div
+				class="pointer-events-none fixed inset-4 border border-[var(--terracotta)]/50 sm:inset-6"
+			></div>
+
+			<div class="mx-auto max-w-2xl">
+				<a
+					href="/#menu"
+					class="font-serif text-sm uppercase tracking-[0.3em] text-[var(--sage)]"
+				>
+					← Retour
+				</a>
+
+				<header class="py-20 text-center">
+					<p class="font-serif text-sm uppercase tracking-[0.4em] text-[var(--sage)]">
+						Nous espérons vous retrouver
+					</p>
+
+					<h1 class="mt-5 font-serif text-6xl text-[var(--olive)] sm:text-7xl">
+						RSVP
+					</h1>
+
+					<div class="mx-auto my-8 h-px w-16 bg-[var(--terracotta)]/60"></div>
+
+					<p class="font-serif text-xl text-[var(--sage)]">
+						Merci de nous répondre avant le 1er juin 2027.
+					</p>
+				</header>
+
+				<form class="space-y-8 border border-[var(--sage)]/25 bg-[var(--paper)]/60 p-8 sm:p-12">
+					<div>
+						<label for="name" class="font-serif text-xl text-[var(--olive)]">
+							Votre nom
+						</label>
+
+						<input
+                        	id="name"
+                            name="name"
+                            type="text"
+                            class="font-serif mt-3 w-full border-b border-[var(--sage)]/40 bg-transparent px-1 py-3 text-xl text-[var(--olive)] outline-none focus:border-[var(--terracotta)]"
+                        />
+					</div>
+
+					<fieldset>
+						<legend class="font-serif text-xl text-[var(--olive)]">
+							Serez-vous parmi nous ?
+						</legend>
+
+						<div class="mt-4 space-y-3">
+							<label class="flex items-center gap-3">
+								<input type="radio" name="attendance" value="yes" />
+								<span>Oui, avec grand plaisir !</span>
+							</label>
+
+							<label class="flex items-center gap-3">
+								<input type="radio" name="attendance" value="no" />
+								<span>Malheureusement non</span>
+							</label>
+						</div>
+					</fieldset>
+
+					<div>
+						<label for="guest" class="font-serif text-xl text-[var(--olive)]">
+							Nom de votre accompagnant(e)
+						</label>
+
+						<input
+							id="guest"
+							name="guest"
+							type="text"
+							class="mt-3 w-full border-b border-[var(--sage)]/40 bg-transparent px-1 py-3 outline-none focus:border-[var(--terracotta)]"
+						/>
+					</div>
+
+					<div>
+						<label for="diet" class="font-serif text-xl text-[var(--olive)]">
+							Régime alimentaire ou allergies
+						</label>
+
+						<textarea
+	                        id="message"
+                            name="message"
+                            rows="4"
+                            class="font-serif mt-3 w-full border border-[var(--sage)]/30 bg-transparent p-4 text-xl leading-relaxed text-[var(--olive)] outline-none focus:border-[var(--terracotta)]"
+                        ></textarea>
+					</div>
+
+					<div>
+						<label for="message" class="font-serif text-xl text-[var(--olive)]">
+							Un petit mot pour nous
+						</label>
+
+						<textarea
+	                        id="message"
+                            name="message"
+                            rows="4"
+                            class="font-serif mt-3 w-full border border-[var(--sage)]/30 bg-transparent p-4 text-xl leading-relaxed text-[var(--olive)] outline-none focus:border-[var(--terracotta)]"
+                        ></textarea>
+					</div>
+
+					<button
+						type="submit"
+						class="w-full border border-[var(--terracotta)] px-6 py-4 font-serif text-xl text-[var(--terracotta-dark)] transition-all hover:bg-[var(--terracotta)] hover:text-white"
+					>
+						Envoyer notre réponse
+					</button>
+				</form>
+			</div>
+		</main>
+	</body>
+</html>

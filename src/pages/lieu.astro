@@ -1,0 +1,73 @@
+---
+import "../styles/global.css";
+---
+
+<html lang="fr">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>Le lieu — Jeanne & Maxime</title>
+	</head>
+
+	<body class="bg-[var(--ivory)] text-[var(--text)]">
+		<main class="relative min-h-screen px-8 py-24 sm:px-16">
+			<div
+				class="pointer-events-none fixed inset-4 border border-[var(--terracotta)]/50 sm:inset-6"
+			></div>
+
+			<div class="mx-auto max-w-4xl">
+				<a
+					href="/#menu"
+					class="font-serif text-sm uppercase tracking-[0.3em] text-[var(--sage)]"
+				>
+					← Retour
+				</a>
+
+				<header class="py-20 text-center">
+					<p class="font-serif text-sm uppercase tracking-[0.4em] text-[var(--sage)]">
+						Le domaine
+					</p>
+
+					<h1 class="mt-5 font-serif text-6xl text-[var(--olive)] sm:text-7xl">
+						Le lieu
+					</h1>
+
+					<div class="mx-auto my-8 h-px w-16 bg-[var(--terracotta)]/60"></div>
+				</header>
+
+				<section class="space-y-10">
+					<div class="border border-[var(--sage)]/25 bg-[var(--paper)]/60 p-10 text-center">
+						<h2 class="font-serif text-4xl text-[var(--olive)]">
+							Nom du domaine
+						</h2>
+
+						<p class="mt-4 font-serif text-xl text-[var(--sage)]">
+							Adresse du lieu
+						</p>
+
+						<p class="mt-6 leading-relaxed">
+							Ajoutez ici une courte présentation du lieu, son histoire ou
+							ce qui vous a donné envie de vous y marier.
+						</p>
+					</div>
+
+					<div class="grid gap-8 md:grid-cols-2">
+						<div>
+							<p class="font-serif text-2xl text-[var(--olive)]">Accès</p>
+							<p class="mt-3 leading-relaxed text-[var(--sage)]">
+								Informations sur l'accès en voiture, train ou taxi.
+							</p>
+						</div>
+
+						<div>
+							<p class="font-serif text-2xl text-[var(--olive)]">Parking</p>
+							<p class="mt-3 leading-relaxed text-[var(--sage)]">
+								Précisez ici les possibilités de stationnement.
+							</p>
+						</div>
+					</div>
+				</section>
+			</div>
+		</main>
+	</body>
+</html>
