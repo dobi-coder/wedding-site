@@ -147,68 +147,21 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 				id="attendance-details"
 				class="hidden space-y-10"
 			>
-				<!-- Number of guests -->
+				<!-- Attendee names -->
 				<div>
-					<label
-						for="guests"
-						class="mb-3 block font-serif text-lg text-[var(--olive)]"
-					>
-						How many of you will be attending?
-					</label>
-
-					<select
-						id="guests"
-						name="Number of guests"
-						disabled
-						class="w-full border border-[var(--sage)]/30 bg-[var(--paper)]/50 px-5 py-4
-						font-serif text-lg text-[var(--olive)] outline-none
-						transition-colors duration-300
-						focus:border-[var(--terracotta)]"
-					>
-						<option value="" selected disabled>
-							Select
-						</option>
-
-						<option value="1">
-							1 person
-						</option>
-
-						<option value="2">
-							2 people
-						</option>
-
-						<option value="3">
-							3 people
-						</option>
-
-						<option value="4">
-							4 people
-						</option>
-
-						<option value="5">
-							5 people
-						</option>
-					</select>
-				</div>
-
-				<!-- Guest names -->
-				<div
-					id="guest-names-section"
-					class="hidden"
-				>
 					<label
 						for="guest-names"
 						class="mb-3 block font-serif text-lg text-[var(--olive)]"
 					>
-						Full name(s) of your guest(s)
+						Full name of each person attending
 					</label>
 
 					<textarea
 						id="guest-names"
-						name="Guest names"
+						name="Names of attendees"
 						rows="3"
 						disabled
-						placeholder="First and last name"
+						placeholder="One person per line"
 						class="w-full resize-none border border-[var(--sage)]/30 bg-[var(--paper)]/50
 						px-5 py-4 font-serif text-lg text-[var(--olive)] outline-none
 						placeholder:text-[var(--sage)]/50
@@ -219,7 +172,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 					<p
 						class="mt-2 text-sm italic text-[var(--sage)]/70"
 					>
-						Please give the name of each person who will be joining you.
+						Please include your own name and everyone covered by this response.
 					</p>
 				</div>
 
@@ -363,46 +316,15 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 			"#attendance-details"
 		);
 
-		const guestSelect = document.querySelector(
-			"#guests"
-		);
-
-		const guestNamesSection = document.querySelector(
-			"#guest-names-section"
-		);
-
 		const guestNames = document.querySelector(
 			"#guest-names"
 		);
-
-		function updateGuestNames() {
-			if (
-				!(guestSelect instanceof HTMLSelectElement) ||
-				!(guestNamesSection instanceof HTMLElement) ||
-				!(guestNames instanceof HTMLTextAreaElement)
-			) {
-				return;
-			}
-
-			const numberOfGuests = Number(guestSelect.value);
-
-			if (numberOfGuests > 1) {
-				guestNamesSection.classList.remove("hidden");
-				guestNames.disabled = false;
-				guestNames.required = true;
-			} else {
-				guestNamesSection.classList.add("hidden");
-				guestNames.disabled = true;
-				guestNames.required = false;
-				guestNames.value = "";
-			}
-		}
 
 		function updateAttendanceDetails() {
 			if (
 				!(yesRadio instanceof HTMLInputElement) ||
 				!(attendanceDetails instanceof HTMLElement) ||
-				!(guestSelect instanceof HTMLSelectElement)
+				!(guestNames instanceof HTMLTextAreaElement)
 			) {
 				return;
 			}
@@ -410,26 +332,14 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 			if (yesRadio.checked) {
 				attendanceDetails.classList.remove("hidden");
 
-				guestSelect.disabled = false;
-				guestSelect.required = true;
-
-				updateGuestNames();
+				guestNames.disabled = false;
+				guestNames.required = true;
 			} else {
 				attendanceDetails.classList.add("hidden");
 
-				guestSelect.disabled = true;
-				guestSelect.required = false;
-				guestSelect.value = "";
-
-				if (
-					guestNamesSection instanceof HTMLElement &&
-					guestNames instanceof HTMLTextAreaElement
-				) {
-					guestNamesSection.classList.add("hidden");
-					guestNames.disabled = true;
-					guestNames.required = false;
-					guestNames.value = "";
-				}
+				guestNames.disabled = true;
+				guestNames.required = false;
+				guestNames.value = "";
 
 				const sundayRadios =
 					attendanceDetails.querySelectorAll(
@@ -458,11 +368,6 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 		noRadio?.addEventListener(
 			"change",
 			updateAttendanceDetails
-		);
-
-		guestSelect?.addEventListener(
-			"change",
-			updateGuestNames
 		);
 
 		updateAttendanceDetails();

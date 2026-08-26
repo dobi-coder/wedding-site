@@ -147,68 +147,21 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 				id="attendance-details"
 				class="hidden space-y-10"
 			>
-				<!-- Number of guests -->
+				<!-- Attendee names -->
 				<div>
-					<label
-						for="guests"
-						class="mb-3 block font-serif text-lg text-[var(--olive)]"
-					>
-						Combien serez-vous ?
-					</label>
-
-					<select
-						id="guests"
-						name="Nombre de personnes"
-						disabled
-						class="w-full border border-[var(--sage)]/30 bg-[var(--paper)]/50 px-5 py-4
-						font-serif text-lg text-[var(--olive)] outline-none
-						transition-colors duration-300
-						focus:border-[var(--terracotta)]"
-					>
-						<option value="" selected disabled>
-							Sélectionnez
-						</option>
-
-						<option value="1">
-							1 personne
-						</option>
-
-						<option value="2">
-							2 personnes
-						</option>
-
-						<option value="3">
-							3 personnes
-						</option>
-
-						<option value="4">
-							4 personnes
-						</option>
-
-						<option value="5">
-							5 personnes
-						</option>
-					</select>
-				</div>
-
-				<!-- Guest names -->
-				<div
-					id="guest-names-section"
-					class="hidden"
-				>
 					<label
 						for="guest-names"
 						class="mb-3 block font-serif text-lg text-[var(--olive)]"
 					>
-						Nom et prénom de votre / vos accompagnant(s)
+						Nom et prénom de chaque personne présente
 					</label>
 
 					<textarea
 						id="guest-names"
-						name="Nom des accompagnants"
+						name="Noms des personnes présentes"
 						rows="3"
 						disabled
-						placeholder="Prénom et nom"
+						placeholder="Une personne par ligne"
 						class="w-full resize-none border border-[var(--sage)]/30 bg-[var(--paper)]/50
 						px-5 py-4 font-serif text-lg text-[var(--olive)] outline-none
 						placeholder:text-[var(--sage)]/50
@@ -219,7 +172,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 					<p
 						class="mt-2 text-sm italic text-[var(--sage)]/70"
 					>
-						Merci d'indiquer le nom de chaque personne qui vous accompagnera.
+						Merci d’indiquer votre nom ainsi que celui de chaque personne incluse dans cette réponse.
 					</p>
 				</div>
 
@@ -363,46 +316,15 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 			"#attendance-details"
 		);
 
-		const guestSelect = document.querySelector(
-			"#guests"
-		);
-
-		const guestNamesSection = document.querySelector(
-			"#guest-names-section"
-		);
-
 		const guestNames = document.querySelector(
 			"#guest-names"
 		);
-
-		function updateGuestNames() {
-			if (
-				!(guestSelect instanceof HTMLSelectElement) ||
-				!(guestNamesSection instanceof HTMLElement) ||
-				!(guestNames instanceof HTMLTextAreaElement)
-			) {
-				return;
-			}
-
-			const numberOfGuests = Number(guestSelect.value);
-
-			if (numberOfGuests > 1) {
-				guestNamesSection.classList.remove("hidden");
-				guestNames.disabled = false;
-				guestNames.required = true;
-			} else {
-				guestNamesSection.classList.add("hidden");
-				guestNames.disabled = true;
-				guestNames.required = false;
-				guestNames.value = "";
-			}
-		}
 
 		function updateAttendanceDetails() {
 			if (
 				!(yesRadio instanceof HTMLInputElement) ||
 				!(attendanceDetails instanceof HTMLElement) ||
-				!(guestSelect instanceof HTMLSelectElement)
+				!(guestNames instanceof HTMLTextAreaElement)
 			) {
 				return;
 			}
@@ -410,26 +332,14 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 			if (yesRadio.checked) {
 				attendanceDetails.classList.remove("hidden");
 
-				guestSelect.disabled = false;
-				guestSelect.required = true;
-
-				updateGuestNames();
+				guestNames.disabled = false;
+				guestNames.required = true;
 			} else {
 				attendanceDetails.classList.add("hidden");
 
-				guestSelect.disabled = true;
-				guestSelect.required = false;
-				guestSelect.value = "";
-
-				if (
-					guestNamesSection instanceof HTMLElement &&
-					guestNames instanceof HTMLTextAreaElement
-				) {
-					guestNamesSection.classList.add("hidden");
-					guestNames.disabled = true;
-					guestNames.required = false;
-					guestNames.value = "";
-				}
+				guestNames.disabled = true;
+				guestNames.required = false;
+				guestNames.value = "";
 
 				const sundayRadios =
 					attendanceDetails.querySelectorAll(
@@ -458,11 +368,6 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 		noRadio?.addEventListener(
 			"change",
 			updateAttendanceDetails
-		);
-
-		guestSelect?.addEventListener(
-			"change",
-			updateGuestNames
 		);
 
 		updateAttendanceDetails();
