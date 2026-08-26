@@ -1,40 +1,15 @@
 ---
-import "../styles/global.css";
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<html lang="fr">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<meta
-			name="description"
-			content="Le mariage de Jeanne & Maxime — 4 septembre 2027"
-		/>
-		<title>Jeanne & Maxime — Notre mariage</title>
-	</head>
-
-	<body>
-		<!-- Language switch -->
-		<div
-			class="fixed bottom-8 right-8 z-30 flex items-center gap-2 border border-[var(--terracotta)]/40 bg-[var(--paper)]/90 px-4 py-3 font-serif text-sm uppercase tracking-[0.2em] shadow-sm backdrop-blur-sm sm:bottom-10 sm:right-10"
-		>
-			<span class="text-[var(--olive)]">FR</span>
-
-			<span class="text-[var(--sage)]/40">|</span>
-
-			<a
-				href="/en/"
-				class="text-[var(--terracotta-dark)] transition-colors hover:text-[var(--terracotta)]"
-			>
-				EN
-			</a>
-		</div>
-
-		<main class="relative min-h-screen overflow-hidden">
-			<!-- Decorative border -->
-			<div
-				class="pointer-events-none fixed inset-4 z-20 border border-[var(--terracotta)]/50 sm:inset-6"
-			></div>
+<BaseLayout
+	title="Jeanne & Maxime — Notre mariage"
+	description="Le mariage de Jeanne & Maxime — 4 septembre 2027"
+	language="fr"
+	frenchUrl="/"
+	englishUrl="/en/"
+	fullBleed
+>
 
 			<!-- Hero -->
 			<section
@@ -291,6 +266,4 @@ import "../styles/global.css";
 					</a>
 				</div>
 			</section>
-		</main>
-	</body>
-</html>
+</BaseLayout>
