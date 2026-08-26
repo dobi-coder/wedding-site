@@ -3,59 +3,358 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout
-	title="Le week-end — Jeanne & Maxime"
-	description="Informations pratiques pour le week-end du mariage."
-	language="fr"
+	title="The weekend — Jeanne & Maxime"
+	description="Accommodation and practical information for the wedding weekend."
+	language="en"
 	frenchUrl="/weekend"
 	englishUrl="/en/weekend"
-	maxWidth="max-w-4xl"
+	maxWidth="max-w-5xl"
 >
+	<!-- Back -->
 	<a
-		href="/#menu"
+		href="/en/#menu"
 		class="font-serif text-sm uppercase tracking-[0.3em] text-[var(--sage)] transition-colors hover:text-[var(--terracotta)]"
 	>
-		← Retour
+		← Back
 	</a>
 
+	<!-- Header -->
 	<header class="py-20 text-center">
-		<p class="font-serif text-sm uppercase tracking-[0.4em] text-[var(--sage)]">
-			Deux jours ensemble
+		<p
+			class="font-serif text-sm uppercase tracking-[0.4em] text-[var(--sage)]"
+		>
+			Make the most of your stay
 		</p>
 
-		<h1 class="mt-5 font-serif text-6xl text-[var(--olive)] sm:text-7xl">
-			Le week-end
+		<h1
+			class="mt-5 font-serif text-6xl text-[var(--olive)] sm:text-7xl"
+		>
+			The weekend
 		</h1>
 
-		<div class="mx-auto my-8 h-px w-16 bg-[var(--terracotta)]/60"></div>
+		<div
+			class="mx-auto my-8 h-px w-16 bg-[var(--terracotta)]/60"
+		></div>
+
+		<p
+			class="mx-auto max-w-2xl font-serif text-xl leading-relaxed text-[var(--sage)]"
+		>
+			Here are a few accommodation suggestions and practical tips to help you plan your stay around the wedding.
+		</p>
 	</header>
 
-	<section class="space-y-12">
-		<div class="border-l border-[var(--terracotta)] pl-8">
-			<p class="font-serif text-sm uppercase tracking-[0.3em] text-[var(--terracotta)]">
-				Samedi
+
+	<!-- ========================= -->
+	<!-- HÉBERGEMENTS              -->
+	<!-- ========================= -->
+
+	<section>
+		<div class="text-center">
+			<p
+				class="font-serif text-sm uppercase tracking-[0.3em] text-[var(--terracotta)]"
+			>
+				Where to stay
 			</p>
 
-			<h2 class="mt-2 font-serif text-4xl text-[var(--olive)]">
-				Le mariage
+			<h2
+				class="mt-4 font-serif text-4xl text-[var(--olive)]"
+			>
+				Our suggestions
 			</h2>
 
-			<p class="mt-4 leading-relaxed text-[var(--sage)]">
-				La cérémonie, le cocktail, le dîner et la soirée.
+			<p
+				class="mx-auto mt-5 max-w-2xl leading-relaxed text-[var(--sage)]"
+			>
+				You’ll find several hotels, B&Bs and holiday cottages in the villages around the château.
 			</p>
 		</div>
 
-		<div class="border-l border-[var(--terracotta)] pl-8">
-			<p class="font-serif text-sm uppercase tracking-[0.3em] text-[var(--terracotta)]">
-				Dimanche
-			</p>
+		<div class="mt-12 grid gap-6 md:grid-cols-2">
 
-			<h2 class="mt-2 font-serif text-4xl text-[var(--olive)]">
-				Le retour de noces
-			</h2>
+			<!-- Château -->
+			<div
+				class="border border-[var(--terracotta)]/40 bg-[var(--paper)]/60 p-8"
+			>
+				<p
+					class="font-serif text-sm uppercase tracking-[0.3em] text-[var(--terracotta)]"
+				>
+					On site
+				</p>
 
-			<p class="mt-4 leading-relaxed text-[var(--sage)]">
-				Nous vous retrouverons le lendemain pour prolonger les festivités.
-			</p>
+				<h3
+					class="mt-3 font-serif text-3xl text-[var(--olive)]"
+				>
+					At the château
+				</h3>
+
+				<p
+					class="mt-4 leading-relaxed text-[var(--sage)]"
+				>
+					Holiday cottages are available directly on the estate. They will be offered to close family and friends first.
+				</p>
+
+				<p
+					class="mt-4 text-sm italic leading-relaxed text-[var(--sage)]"
+				>
+					We’ll contact you directly if accommodation on site has been allocated to you.
+				</p>
+			</div>
+
+
+			<!-- Hameau de Céline -->
+			<div
+				class="border border-[var(--sage)]/25 bg-[var(--paper)]/60 p-8"
+			>
+				<p
+					class="font-serif text-sm uppercase tracking-[0.3em] text-[var(--terracotta)]"
+				>
+					Holiday cottage
+				</p>
+
+				<h3
+					class="mt-3 font-serif text-3xl text-[var(--olive)]"
+				>
+					Le Hameau de Céline
+				</h3>
+
+				<p
+					class="mt-4 leading-relaxed text-[var(--sage)]"
+				>
+					Holiday cottages and a guest house in Landes-le-Gaulois,
+					close to the estate.
+				</p>
+			</div>
+
+
+			<!-- Clos Sainte-Marie -->
+			<div
+				class="border border-[var(--sage)]/25 bg-[var(--paper)]/60 p-8"
+			>
+				<p
+					class="font-serif text-sm uppercase tracking-[0.3em] text-[var(--terracotta)]"
+				>
+					B&B
+				</p>
+
+				<h3
+					class="mt-3 font-serif text-3xl text-[var(--olive)]"
+				>
+					Le Clos Sainte-Marie
+				</h3>
+
+				<p
+					class="mt-4 leading-relaxed text-[var(--sage)]"
+				>
+					An option in Mesland, near Chaumont-sur-Loire and Onzain.
+				</p>
+			</div>
+
+
+			<!-- Rêve de Loire -->
+			<div
+				class="border border-[var(--sage)]/25 bg-[var(--paper)]/60 p-8"
+			>
+				<p
+					class="font-serif text-sm uppercase tracking-[0.3em] text-[var(--terracotta)]"
+				>
+					B&B
+				</p>
+
+				<h3
+					class="mt-3 font-serif text-3xl text-[var(--olive)]"
+				>
+					Rêve de Loire
+				</h3>
+
+				<p
+					class="mt-4 leading-relaxed text-[var(--sage)]"
+				>
+					Another option in Veuzain-sur-Loire, a convenient base for exploring the area.
+				</p>
+			</div>
+
 		</div>
 	</section>
+
+
+	<!-- ========================= -->
+	<!-- INFORMATIONS PRATIQUES    -->
+	<!-- ========================= -->
+
+	<section class="py-24">
+		<div class="text-center">
+			<p
+				class="font-serif text-sm uppercase tracking-[0.3em] text-[var(--terracotta)]"
+			>
+				A few tips
+			</p>
+
+			<h2
+				class="mt-4 font-serif text-4xl text-[var(--olive)]"
+			>
+				Practical information
+			</h2>
+		</div>
+
+		<div class="mx-auto mt-10 max-w-3xl space-y-8">
+
+			<!-- Book early -->
+			<div
+				class="border-l border-[var(--terracotta)] pl-6"
+			>
+				<h3
+					class="font-serif text-2xl text-[var(--olive)]"
+				>
+					Book early
+				</h3>
+
+				<p
+					class="mt-2 leading-relaxed text-[var(--sage)]"
+				>
+					The region attracts many visitors, particularly around the Loire Valley châteaux, so we recommend booking your accommodation as soon as possible.
+				</p>
+			</div>
+
+
+			<!-- Car -->
+			<div
+				class="border-l border-[var(--terracotta)] pl-6"
+			>
+				<h3
+					class="font-serif text-2xl text-[var(--olive)]"
+				>
+					A car will be useful
+				</h3>
+
+				<p
+					class="mt-2 leading-relaxed text-[var(--sage)]"
+				>
+					Accommodation is spread across several villages around the château. Driving or sharing a car will generally be the easiest option.
+				</p>
+			</div>
+
+
+			<!-- Taxi -->
+			<div
+				class="border-l border-[var(--terracotta)] pl-6"
+			>
+				<h3
+					class="font-serif text-2xl text-[var(--olive)]"
+				>
+					Taxis &amp; car sharing
+				</h3>
+
+				<p
+					class="mt-2 leading-relaxed text-[var(--sage)]"
+				>
+					We’ll add information about taxis and car-sharing options for the wedding evening closer to the date.
+				</p>
+			</div>
+
+		</div>
+	</section>
+
+
+	<!-- ========================= -->
+	<!-- PROFITER DE LA RÉGION     -->
+	<!-- ========================= -->
+
+	<section class="pb-24">
+		<div class="text-center">
+			<p
+				class="font-serif text-sm uppercase tracking-[0.3em] text-[var(--terracotta)]"
+			>
+				If you’re staying a few days
+			</p>
+
+			<h2
+				class="mt-4 font-serif text-4xl text-[var(--olive)]"
+			>
+				Explore the region
+			</h2>
+
+			<p
+				class="mx-auto mt-5 max-w-2xl leading-relaxed text-[var(--sage)]"
+			>
+				If you’d like to extend your stay, here are a few ideas for exploring the surrounding area and the Loire Valley châteaux.
+			</p>
+		</div>
+
+
+		<div class="mt-12 grid gap-6 md:grid-cols-3">
+
+			<!-- Chaumont -->
+			<div
+				class="border border-[var(--sage)]/25 bg-[var(--paper)]/60 p-8"
+			>
+				<p
+					class="font-serif text-sm uppercase tracking-[0.3em] text-[var(--terracotta)]"
+				>
+					Nearby
+				</p>
+
+				<h3
+					class="mt-3 font-serif text-3xl text-[var(--olive)]"
+				>
+					Chaumont-sur-Loire
+				</h3>
+
+				<p
+					class="mt-4 leading-relaxed text-[var(--sage)]"
+				>
+					Its château, gardens and the Domaine de Chaumont-sur-Loire are perfect for a day out.
+				</p>
+			</div>
+
+
+			<!-- Blois -->
+			<div
+				class="border border-[var(--sage)]/25 bg-[var(--paper)]/60 p-8"
+			>
+				<p
+					class="font-serif text-sm uppercase tracking-[0.3em] text-[var(--terracotta)]"
+				>
+					Town &amp; château
+				</p>
+
+				<h3
+					class="mt-3 font-serif text-3xl text-[var(--olive)]"
+				>
+					Blois
+				</h3>
+
+				<p
+					class="mt-4 leading-relaxed text-[var(--sage)]"
+				>
+					A lovely town on the Loire, ideal for lunch, a stroll through the historic centre and a visit to the royal château.
+				</p>
+			</div>
+
+
+			<!-- Amboise -->
+			<div
+				class="border border-[var(--sage)]/25 bg-[var(--paper)]/60 p-8"
+			>
+				<p
+					class="font-serif text-sm uppercase tracking-[0.3em] text-[var(--terracotta)]"
+				>
+					Worth discovering
+				</p>
+
+				<h3
+					class="mt-3 font-serif text-3xl text-[var(--olive)]"
+				>
+					Amboise
+				</h3>
+
+				<p
+					class="mt-4 leading-relaxed text-[var(--sage)]"
+				>
+					A beautiful stop on the Loire, with its château, charming streets and many restaurants.
+				</p>
+			</div>
+
+		</div>
+	</section>
+
 </BaseLayout>

@@ -4,34 +4,467 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 
 <BaseLayout
 	title="RSVP — Jeanne & Maxime"
-	description="Confirmez votre présence au mariage de Jeanne & Maxime."
-	language="fr"
+	description="Confirm your attendance at Jeanne & Maxime’s wedding."
+	language="en"
 	frenchUrl="/rsvp"
 	englishUrl="/en/rsvp"
 	maxWidth="max-w-2xl"
 >
 	<a
-		href="/#menu"
+		href="/en/#menu"
 		class="font-serif text-sm uppercase tracking-[0.3em] text-[var(--sage)] transition-colors hover:text-[var(--terracotta)]"
 	>
-		← Retour
+		← Back
 	</a>
 
-	<header class="py-20 text-center">
-		<p class="font-serif text-sm uppercase tracking-[0.4em] text-[var(--sage)]">
-			Nous espérons vous retrouver
+	<header class="py-16 text-center sm:py-20">
+		<p
+			class="font-serif text-sm uppercase tracking-[0.4em] text-[var(--sage)]"
+		>
+			We hope you can join us
 		</p>
 
-		<h1 class="mt-5 font-serif text-6xl text-[var(--olive)] sm:text-7xl">
+		<h1
+			class="mt-5 font-serif text-6xl text-[var(--olive)] sm:text-7xl"
+		>
 			RSVP
 		</h1>
 
-		<div class="mx-auto my-8 h-px w-16 bg-[var(--terracotta)]/60"></div>
+		<div
+			class="mx-auto my-8 h-px w-16 bg-[var(--terracotta)]/60"
+		></div>
 
 		<p class="font-serif text-xl text-[var(--sage)]">
-			Merci de nous répondre avant le 1er juin 2027.
+			Please reply by 1 June 2027.
 		</p>
 	</header>
 
-	<!-- Keep your current form here -->
+	<section class="pb-24">
+		<form
+			action="https://formspree.io/f/mvkopplj"
+			method="POST"
+			class="space-y-10"
+		>
+			<input
+				type="hidden"
+				name="_subject"
+				value="New RSVP response — Jeanne & Maxime’s wedding"
+			/>
+
+			<!-- Name -->
+			<div>
+				<label
+					for="name"
+					class="mb-3 block font-serif text-lg text-[var(--olive)]"
+				>
+					Full name
+				</label>
+
+				<input
+					type="text"
+					id="name"
+					name="Full name"
+					required
+					autocomplete="name"
+					class="w-full border border-[var(--sage)]/30 bg-[var(--paper)]/50 px-5 py-4
+					font-serif text-lg text-[var(--olive)] outline-none
+					transition-colors duration-300
+					focus:border-[var(--terracotta)]"
+				/>
+			</div>
+
+			<!-- Email -->
+			<div>
+				<label
+					for="email"
+					class="mb-3 block font-serif text-lg text-[var(--olive)]"
+				>
+					Email address
+				</label>
+
+				<input
+					type="email"
+					id="email"
+					name="email"
+					autocomplete="email"
+					class="w-full border border-[var(--sage)]/30 bg-[var(--paper)]/50 px-5 py-4
+					font-serif text-lg text-[var(--olive)] outline-none
+					transition-colors duration-300
+					focus:border-[var(--terracotta)]"
+				/>
+			</div>
+
+			<!-- Attendance -->
+			<fieldset>
+				<legend
+					class="mb-4 font-serif text-lg text-[var(--olive)]"
+				>
+					Will you be joining us?
+				</legend>
+
+				<div class="space-y-3">
+					<label
+						class="flex cursor-pointer items-center gap-4 border border-[var(--sage)]/25
+						bg-[var(--paper)]/40 px-5 py-4 transition-colors
+						hover:border-[var(--terracotta)]"
+					>
+						<input
+							type="radio"
+							name="Attendance"
+							value="Yes"
+							required
+							data-attendance="yes"
+							class="accent-[var(--terracotta)]"
+						/>
+
+						<span class="font-serif text-lg text-[var(--sage)]">
+							We’d love to!
+						</span>
+					</label>
+
+					<label
+						class="flex cursor-pointer items-center gap-4 border border-[var(--sage)]/25
+						bg-[var(--paper)]/40 px-5 py-4 transition-colors
+						hover:border-[var(--terracotta)]"
+					>
+						<input
+							type="radio"
+							name="Attendance"
+							value="No"
+							data-attendance="no"
+							class="accent-[var(--terracotta)]"
+						/>
+
+						<span class="font-serif text-lg text-[var(--sage)]">
+							Unfortunately, we won’t be able to attend.
+						</span>
+					</label>
+				</div>
+			</fieldset>
+
+			<!-- Only shown if attending -->
+			<div
+				id="attendance-details"
+				class="hidden space-y-10"
+			>
+				<!-- Number of guests -->
+				<div>
+					<label
+						for="guests"
+						class="mb-3 block font-serif text-lg text-[var(--olive)]"
+					>
+						How many of you will be attending?
+					</label>
+
+					<select
+						id="guests"
+						name="Number of guests"
+						disabled
+						class="w-full border border-[var(--sage)]/30 bg-[var(--paper)]/50 px-5 py-4
+						font-serif text-lg text-[var(--olive)] outline-none
+						transition-colors duration-300
+						focus:border-[var(--terracotta)]"
+					>
+						<option value="" selected disabled>
+							Select
+						</option>
+
+						<option value="1">
+							1 person
+						</option>
+
+						<option value="2">
+							2 people
+						</option>
+
+						<option value="3">
+							3 people
+						</option>
+
+						<option value="4">
+							4 people
+						</option>
+
+						<option value="5">
+							5 people
+						</option>
+					</select>
+				</div>
+
+				<!-- Guest names -->
+				<div
+					id="guest-names-section"
+					class="hidden"
+				>
+					<label
+						for="guest-names"
+						class="mb-3 block font-serif text-lg text-[var(--olive)]"
+					>
+						Full name(s) of your guest(s)
+					</label>
+
+					<textarea
+						id="guest-names"
+						name="Guest names"
+						rows="3"
+						disabled
+						placeholder="First and last name"
+						class="w-full resize-none border border-[var(--sage)]/30 bg-[var(--paper)]/50
+						px-5 py-4 font-serif text-lg text-[var(--olive)] outline-none
+						placeholder:text-[var(--sage)]/50
+						transition-colors duration-300
+						focus:border-[var(--terracotta)]"
+					></textarea>
+
+					<p
+						class="mt-2 text-sm italic text-[var(--sage)]/70"
+					>
+						Please give the name of each person who will be joining you.
+					</p>
+				</div>
+
+				<!-- Sunday -->
+				<fieldset>
+					<legend
+						class="mb-4 font-serif text-lg text-[var(--olive)]"
+					>
+						Will you also be joining us on Sunday?
+					</legend>
+
+					<div class="flex flex-col gap-3 sm:flex-row">
+						<label
+							class="flex flex-1 cursor-pointer items-center gap-4 border
+							border-[var(--sage)]/25 bg-[var(--paper)]/40 px-5 py-4
+							transition-colors hover:border-[var(--terracotta)]"
+						>
+							<input
+								type="radio"
+								name="Sunday attendance"
+								value="Yes"
+								class="accent-[var(--terracotta)]"
+							/>
+
+							<span class="font-serif text-lg text-[var(--sage)]">
+								Yes
+							</span>
+						</label>
+
+						<label
+							class="flex flex-1 cursor-pointer items-center gap-4 border
+							border-[var(--sage)]/25 bg-[var(--paper)]/40 px-5 py-4
+							transition-colors hover:border-[var(--terracotta)]"
+						>
+							<input
+								type="radio"
+								name="Sunday attendance"
+								value="No"
+								class="accent-[var(--terracotta)]"
+							/>
+
+							<span class="font-serif text-lg text-[var(--sage)]">
+								No
+							</span>
+						</label>
+					</div>
+				</fieldset>
+
+				<!-- Dietary requirements -->
+				<div>
+					<label
+						for="dietary"
+						class="mb-3 block font-serif text-lg text-[var(--olive)]"
+					>
+						Allergies or dietary requirements
+					</label>
+
+					<textarea
+						id="dietary"
+						name="Allergies / dietary requirements"
+						rows="3"
+						placeholder="Vegetarian, allergies, intolerances..."
+						class="w-full resize-none border border-[var(--sage)]/30 bg-[var(--paper)]/50
+						px-5 py-4 font-serif text-lg text-[var(--olive)] outline-none
+						placeholder:text-[var(--sage)]/50
+						transition-colors duration-300
+						focus:border-[var(--terracotta)]"
+					></textarea>
+				</div>
+			</div>
+
+			<!-- Message -->
+			<div>
+				<label
+					for="message"
+					class="mb-3 block font-serif text-lg text-[var(--olive)]"
+				>
+					A little note
+					<span class="text-[var(--sage)]/60">
+						(optional)
+					</span>
+				</label>
+
+				<textarea
+					id="message"
+					name="Message"
+					rows="4"
+					class="w-full resize-none border border-[var(--sage)]/30 bg-[var(--paper)]/50
+					px-5 py-4 font-serif text-lg text-[var(--olive)] outline-none
+					transition-colors duration-300
+					focus:border-[var(--terracotta)]"
+				></textarea>
+			</div>
+
+			<!-- Submit -->
+			<div class="pt-4 text-center">
+				<button
+					type="submit"
+					class="border border-[var(--terracotta)] px-10 py-4
+					font-serif text-lg text-[var(--terracotta-dark)]
+					transition-all duration-300
+					hover:-translate-y-1
+					hover:bg-[var(--terracotta)]
+					hover:text-white"
+				>
+					Send our response
+				</button>
+			</div>
+		</form>
+
+		<!-- Decorative ending -->
+		<div
+			class="mx-auto mt-16 flex max-w-xs items-center gap-4"
+		>
+			<div
+				class="h-px flex-1 bg-[var(--sage)]/20"
+			></div>
+
+			<span
+				class="text-sm text-[var(--terracotta)]"
+			>
+				♥
+			</span>
+
+			<div
+				class="h-px flex-1 bg-[var(--sage)]/20"
+			></div>
+		</div>
+	</section>
+
+	<script>
+		const yesRadio = document.querySelector(
+			'[data-attendance="yes"]'
+		);
+
+		const noRadio = document.querySelector(
+			'[data-attendance="no"]'
+		);
+
+		const attendanceDetails = document.querySelector(
+			"#attendance-details"
+		);
+
+		const guestSelect = document.querySelector(
+			"#guests"
+		);
+
+		const guestNamesSection = document.querySelector(
+			"#guest-names-section"
+		);
+
+		const guestNames = document.querySelector(
+			"#guest-names"
+		);
+
+		function updateGuestNames() {
+			if (
+				!(guestSelect instanceof HTMLSelectElement) ||
+				!(guestNamesSection instanceof HTMLElement) ||
+				!(guestNames instanceof HTMLTextAreaElement)
+			) {
+				return;
+			}
+
+			const numberOfGuests = Number(guestSelect.value);
+
+			if (numberOfGuests > 1) {
+				guestNamesSection.classList.remove("hidden");
+				guestNames.disabled = false;
+				guestNames.required = true;
+			} else {
+				guestNamesSection.classList.add("hidden");
+				guestNames.disabled = true;
+				guestNames.required = false;
+				guestNames.value = "";
+			}
+		}
+
+		function updateAttendanceDetails() {
+			if (
+				!(yesRadio instanceof HTMLInputElement) ||
+				!(attendanceDetails instanceof HTMLElement) ||
+				!(guestSelect instanceof HTMLSelectElement)
+			) {
+				return;
+			}
+
+			if (yesRadio.checked) {
+				attendanceDetails.classList.remove("hidden");
+
+				guestSelect.disabled = false;
+				guestSelect.required = true;
+
+				updateGuestNames();
+			} else {
+				attendanceDetails.classList.add("hidden");
+
+				guestSelect.disabled = true;
+				guestSelect.required = false;
+				guestSelect.value = "";
+
+				if (
+					guestNamesSection instanceof HTMLElement &&
+					guestNames instanceof HTMLTextAreaElement
+				) {
+					guestNamesSection.classList.add("hidden");
+					guestNames.disabled = true;
+					guestNames.required = false;
+					guestNames.value = "";
+				}
+
+				const sundayRadios =
+					attendanceDetails.querySelectorAll(
+						'input[name="Sunday attendance"]'
+					);
+
+				sundayRadios.forEach((radio) => {
+					if (radio instanceof HTMLInputElement) {
+						radio.checked = false;
+					}
+				});
+
+				const dietary = document.querySelector("#dietary");
+
+				if (dietary instanceof HTMLTextAreaElement) {
+					dietary.value = "";
+				}
+			}
+		}
+
+		yesRadio?.addEventListener(
+			"change",
+			updateAttendanceDetails
+		);
+
+		noRadio?.addEventListener(
+			"change",
+			updateAttendanceDetails
+		);
+
+		guestSelect?.addEventListener(
+			"change",
+			updateGuestNames
+		);
+
+		updateAttendanceDetails();
+	</script>
 </BaseLayout>

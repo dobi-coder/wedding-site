@@ -3,35 +3,44 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout
-	title="Le mariage — Jeanne & Maxime"
-	description="Le programme du mariage de Jeanne & Maxime."
-	language="fr"
+	title="The wedding — Jeanne & Maxime"
+	description="The schedule for Jeanne & Maxime’s wedding."
+	language="en"
 	frenchUrl="/mariage"
 	englishUrl="/en/wedding"
 	maxWidth="max-w-4xl"
 >
 	<a
-		href="/#menu"
+		href="/en/#menu"
 		class="font-serif text-sm uppercase tracking-[0.3em] text-[var(--sage)] transition-colors hover:text-[var(--terracotta)]"
 	>
-		← Retour
+		← Back
 	</a>
 
 	<header class="py-20 text-center">
 		<p class="font-serif text-sm uppercase tracking-[0.4em] text-[var(--sage)]">
-			4 septembre 2027
+			4 September 2027
 		</p>
 
 		<h1 class="mt-5 font-serif text-6xl text-[var(--olive)] sm:text-7xl">
-			Le mariage
+			The wedding
 		</h1>
 
 		<div class="mx-auto my-8 h-px w-16 bg-[var(--terracotta)]/60"></div>
 
 		<p class="font-serif text-xl italic text-[var(--sage)]">
-			Une journée à célébrer ensemble
+			A day of celebrating together
 		</p>
 	</header>
+
+    <div class="flex justify-center pb-12">
+        <img
+            src="/images/champagne-lilies.png"
+            alt=""
+            aria-hidden="true"
+            class="w-52 object-contain sm:w-64 lg:w-72"
+        />
+    </div>
 
 	<section class="grid gap-10 py-10 md:grid-cols-2">
 		<div class="border border-[var(--sage)]/25 bg-[var(--paper)]/60 p-8">
@@ -40,11 +49,11 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 			</p>
 
 			<h2 class="mt-3 font-serif text-3xl text-[var(--olive)]">
-				La cérémonie
+				The ceremony
 			</h2>
 
 			<p class="mt-4 leading-relaxed text-[var(--sage)]">
-				Les détails de la cérémonie seront ajoutés ici.
+				Ceremony details will be added here.
 			</p>
 		</div>
 
@@ -54,11 +63,11 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 			</p>
 
 			<h2 class="mt-3 font-serif text-3xl text-[var(--olive)]">
-				Le cocktail
+				The drinks reception
 			</h2>
 
 			<p class="mt-4 leading-relaxed text-[var(--sage)]">
-				Un moment pour profiter, trinquer et se retrouver.
+				A moment to relax, raise a glass and catch up.
 			</p>
 		</div>
 
@@ -68,25 +77,25 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 			</p>
 
 			<h2 class="mt-3 font-serif text-3xl text-[var(--olive)]">
-				Le dîner
+				Dinner
 			</h2>
 
 			<p class="mt-4 leading-relaxed text-[var(--sage)]">
-				Le dîner et les festivités se poursuivront sur place.
+				Dinner and the celebrations will continue at the venue.
 			</p>
 		</div>
 
 		<div class="border border-[var(--sage)]/25 bg-[var(--paper)]/60 p-8">
 			<p class="font-serif text-sm uppercase tracking-[0.3em] text-[var(--terracotta)]">
-				Jusqu’au bout de la nuit
+				Into the night
 			</p>
 
 			<h2 class="mt-3 font-serif text-3xl text-[var(--olive)]">
-				La soirée
+				The party
 			</h2>
 
 			<p class="mt-4 leading-relaxed text-[var(--sage)]">
-				Préparez vos meilleurs pas de danse.
+				Get your best dance moves ready.
 			</p>
 		</div>
 	</section>

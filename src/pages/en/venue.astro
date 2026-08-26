@@ -3,27 +3,27 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout
-	title="Le lieu — Jeanne & Maxime"
-	description="Découvrez le Château de Saint-Cyr-du-Gault, lieu de notre mariage."
-	language="fr"
+	title="The venue — Jeanne & Maxime"
+	description="Discover the Château de Saint-Cyr-du-Gault, our wedding venue."
+	language="en"
 	frenchUrl="/lieu"
 	englishUrl="/en/venue"
 	maxWidth="max-w-5xl"
 >
 	<a
-		href="/#menu"
+		href="/en/#menu"
 		class="font-serif text-sm uppercase tracking-[0.3em] text-[var(--sage)] transition-colors hover:text-[var(--terracotta)]"
 	>
-		← Retour
+		← Back
 	</a>
 
 	<header class="py-16 text-center sm:py-20">
 		<p class="font-serif text-sm uppercase tracking-[0.4em] text-[var(--sage)]">
-			Le domaine
+			The estate
 		</p>
 
 		<h1 class="mt-5 font-serif text-5xl text-[var(--olive)] sm:text-7xl">
-			Le lieu
+			The venue
 		</h1>
 
 		<div class="mx-auto my-8 h-px w-16 bg-[var(--terracotta)]/60"></div>
@@ -33,20 +33,19 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 		</p>
 	</header>
 
-	<section>
-		<div class="overflow-hidden border border-[var(--terracotta)]/30 bg-[var(--paper)] p-2">
-			<img
-				src="/images/chateau-saint-cyr.jpg"
-				alt="Château de Saint-Cyr-du-Gault"
-				class="h-[350px] w-full object-cover sm:h-[500px]"
-			/>
-		</div>
-	</section>
+	<section class="py-4 sm:py-8">
+        <div class="mx-auto max-w-4xl">
+            <img
+                src="/images/chateau-sticky-note.png"
+                alt="Photo of Château de Saint-Cyr-du-Gault presented in a travel-journal style"
+                class="mx-auto w-full max-w-4xl object-contain"
+            />
+        </div>
+    </section>
 
 	<section class="mx-auto max-w-3xl py-16 text-center sm:py-20">
 		<p class="font-serif text-2xl leading-relaxed text-[var(--olive)] sm:text-3xl">
-			C'est dans ce magnifique château au cœur du Loir-et-Cher que nous
-			aurons le plaisir de vous retrouver pour célébrer notre mariage.
+			We’ll be celebrating together at the Château de Saint-Cyr-du-Gault, in the heart of the Loir-et-Cher region.
 		</p>
 
 		<div class="mx-auto my-10 h-px w-12 bg-[var(--terracotta)]/60"></div>
@@ -65,9 +64,209 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 			rel="noopener noreferrer"
 			class="mt-8 inline-block border border-[var(--terracotta)] px-7 py-3 font-serif text-lg text-[var(--terracotta-dark)] transition-all duration-300 hover:bg-[var(--terracotta)] hover:text-white"
 		>
-			Voir sur Google Maps
+			View on Google Maps
 		</a>
 	</section>
 
-	<!-- Keep your current Accès section below this -->
+    <!-- Practical information -->
+    <section class="py-16">
+        <div class="text-center">
+            <p class="font-serif text-sm uppercase tracking-[0.3em] text-[var(--terracotta)]">
+                Getting to the château
+            </p>
+
+            <h2 class="mt-4 font-serif text-4xl text-[var(--olive)]">
+                Travel
+            </h2>
+
+            <p class="mx-auto mt-5 max-w-2xl leading-relaxed text-[var(--sage)]">
+                Here are a few suggested routes to the château. Please check exact timetables closer to the wedding.
+            </p>
+        </div>
+
+        <div class="mt-12 grid gap-6 lg:grid-cols-3">
+
+            <!-- Paris -->
+            <div class="border border-[var(--sage)]/25 bg-[var(--paper)]/60 p-8">
+                <h3 class="font-serif text-3xl text-[var(--olive)]">
+                    From Paris
+                </h3>
+
+                <!-- Train -->
+                <div class="mt-7">
+                    <div class="flex items-center gap-3">
+                        <span class="text-2xl">🚆</span>
+                        <h4 class="font-serif text-xl text-[var(--terracotta-dark)]">
+                            By train
+                        </h4>
+                    </div>
+
+                    <p class="mt-4 leading-relaxed text-[var(--sage)]">
+                        The easiest option is to take a TGV from
+                        <strong> Paris Gare Montparnasse </strong> towards
+                        <strong> Vendôme - Villiers-sur-Loir </strong>.
+                    </p>
+
+                    <p class="mt-3 leading-relaxed text-[var(--sage)]">
+                        The train journey takes around
+                        <strong> 45 min</strong>.
+                    </p>
+
+                    <p class="mt-3 leading-relaxed text-[var(--sage)]">
+                        Then allow around
+                        <strong> 30 minutes by car or taxi </strong>
+                        to reach the château.
+                    </p>
+                </div>
+
+                <!-- Separator -->
+                <div class="my-8 h-px bg-[var(--terracotta)]/25"></div>
+
+                <!-- Car -->
+                <div>
+                    <div class="flex items-center gap-3">
+                        <span class="text-2xl">🚗</span>
+                        <h4 class="font-serif text-xl text-[var(--terracotta-dark)]">
+                            By car
+                        </h4>
+                    </div>
+
+                    <p class="mt-4 leading-relaxed text-[var(--sage)]">
+                        You can also drive directly to the château from Paris.
+                    </p>
+
+                    <p class="mt-3 leading-relaxed text-[var(--sage)]">
+                        Allow around <strong>2 hours 30 minutes by car</strong>,
+                        depending on traffic.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Lille -->
+            <div class="border border-[var(--sage)]/25 bg-[var(--paper)]/60 p-8">
+                <h3 class="font-serif text-3xl text-[var(--olive)]">
+                    From Lille
+                </h3>
+
+                <!-- Train -->
+                <div class="mt-7">
+                    <div class="flex items-center gap-3">
+                        <span class="text-2xl">🚆</span>
+                        <h4 class="font-serif text-xl text-[var(--terracotta-dark)]">
+                            By train
+                        </h4>
+                    </div>
+
+                    <p class="mt-4 leading-relaxed text-[var(--sage)]">
+                        You can travel by train to
+                        <strong> Blois–Chambord: </strong>Lille - Paris Nord - Paris Austerlitz - Blois–Chambord.
+                    </p>
+
+                    <p class="mt-3 leading-relaxed text-[var(--sage)]">
+                        Allow around
+						<strong> 3 hours 40 minutes to 4 hours 30 minutes </strong>
+                        depending on connections.
+                    </p>
+
+                    <p class="mt-3 leading-relaxed text-[var(--sage)]">
+                        Then allow around
+                        <strong> 35 minutes by car or taxi </strong>
+                        to reach the château.
+                    </p>
+                </div>
+
+                <!-- Separator -->
+                <div class="my-8 h-px bg-[var(--terracotta)]/25"></div>
+
+                <!-- Car -->
+                <div>
+                    <div class="flex items-center gap-3">
+                        <span class="text-2xl">🚗</span>
+                        <h4 class="font-serif text-xl text-[var(--terracotta-dark)]">
+                            By car
+                        </h4>
+                    </div>
+
+                    <p class="mt-4 leading-relaxed text-[var(--sage)]">
+                        You can also drive directly to the château from Lille.
+                    </p>
+
+                    <p class="mt-3 leading-relaxed text-[var(--sage)]">
+                        Allow around <strong> 4 hours 30 minutes by car </strong>,
+                        depending on traffic.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Cambridge -->
+            <div class="border border-[var(--sage)]/25 bg-[var(--paper)]/60 p-8">
+                <h3 class="font-serif text-3xl text-[var(--olive)]">
+                    From Cambridge
+                </h3>
+
+                <!-- Train -->
+                <div class="mt-7">
+                    <div class="flex items-center gap-3">
+                        <span class="text-2xl">🚆</span>
+                        <h4 class="font-serif text-xl text-[var(--terracotta-dark)]">
+                            By train
+                        </h4>
+                    </div>
+
+                    <p class="mt-4 leading-relaxed text-[var(--sage)]">
+                        From Cambridge, travel to
+                        <strong> London St Pancras </strong>, then take
+                        <strong> the Eurostar to Paris Gare du Nord </strong>.
+                    </p>
+
+                    <p class="mt-3 leading-relaxed text-[var(--sage)]">
+                        The Eurostar connects London and Paris in around
+                        <strong> 2 hours 20 minutes</strong>.
+                    </p>
+
+                    <p class="mt-3 leading-relaxed text-[var(--sage)]">
+                        In Paris, make your way to
+                        <strong> Gare Montparnasse </strong> to take a TGV to <strong> Vendôme - Villiers-sur-Loir</strong>.
+                    </p>
+
+                    <p class="mt-3 leading-relaxed text-[var(--sage)]">
+                        From Vendôme, allow around
+                        <strong> 30 minutes by car or taxi </strong>
+                        to reach the château.
+                    </p>
+                </div>
+
+                <!-- Separator -->
+                <div class="my-8 h-px bg-[var(--terracotta)]/25"></div>
+
+                <!-- Plane -->
+                <div>
+                    <div class="flex items-center gap-3">
+                        <span class="text-2xl">✈️</span>
+                        <h4 class="font-serif text-xl text-[var(--terracotta-dark)]">
+                            By plane
+                        </h4>
+                    </div>
+
+                    <p class="mt-4 leading-relaxed text-[var(--sage)]">
+                        You can also fly from London Stansted to Tours to reach the château.
+                    </p>
+                    <a
+                        href="https://www.ryanair.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="mt-5 inline-block border border-[var(--terracotta)] px-5 py-2 font-serif text-base text-[var(--terracotta-dark)] transition-all duration-300 hover:bg-[var(--terracotta)] hover:text-white"
+                    >
+                        View flights on Ryanair
+                    </a>
+
+                    <p class="mt-4 leading-relaxed text-[var(--sage)]">
+                        Hiring a car may be a good option for reaching the château and getting around during the weekend.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
 </BaseLayout>
