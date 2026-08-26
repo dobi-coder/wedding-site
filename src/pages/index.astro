@@ -6,24 +6,30 @@ import "../styles/global.css";
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width" />
-		<meta name="description" content="Le mariage de Jeanne & Maxime — 4 septembre 2027" />
+		<meta
+			name="description"
+			content="Le mariage de Jeanne & Maxime — 4 septembre 2027"
+		/>
 		<title>Jeanne & Maxime — Notre mariage</title>
 	</head>
 
-	<div class="absolute right-10 top-10 z-30 flex items-center gap-2 font-serif text-sm uppercase tracking-[0.2em]">
-		<span class="text-[var(--olive)]">FR</span>
-
-		<span class="text-[var(--sage)]/40">|</span>
-
-		<a
-			href="/en/"
-			class="text-[var(--terracotta-dark)] transition-colors hover:text-[var(--terracotta)]"
-		>
-			EN
-		</a>
-	</div>
-
 	<body>
+		<!-- Language switch -->
+		<div
+			class="absolute right-10 top-10 z-30 flex items-center gap-2 font-serif text-sm uppercase tracking-[0.2em]"
+		>
+			<span class="text-[var(--olive)]">FR</span>
+
+			<span class="text-[var(--sage)]/40">|</span>
+
+			<a
+				href="/en/"
+				class="text-[var(--terracotta-dark)] transition-colors hover:text-[var(--terracotta)]"
+			>
+				EN
+			</a>
+		</div>
+
 		<main class="relative min-h-screen overflow-hidden">
 			<!-- Decorative border -->
 			<div
@@ -34,6 +40,14 @@ import "../styles/global.css";
 			<section
 				class="relative flex min-h-screen items-center justify-center px-8 py-24 sm:px-16"
 			>
+				<!-- Watercolor lilies -->
+				<img
+					src="/images/lilies.png"
+					alt=""
+					aria-hidden="true"
+					class="pointer-events-none absolute right-0 top-0 z-0 w-[260px] select-none sm:w-[380px] lg:w-[500px]"
+				/>
+
 				<div class="relative z-10 mx-auto max-w-4xl text-center">
 					<p
 						class="font-serif text-sm uppercase tracking-[0.45em] text-[var(--sage)] sm:text-base"
@@ -47,7 +61,9 @@ import "../styles/global.css";
 						<span class="font-script">Maxime</span>
 					</div>
 
-					<div class="mx-auto my-8 h-px w-20 bg-[var(--terracotta)]/60"></div>
+					<div
+						class="mx-auto my-8 h-px w-20 bg-[var(--terracotta)]/60"
+					></div>
 
 					<p
 						class="font-serif text-2xl uppercase tracking-[0.25em] text-[var(--olive)] sm:text-3xl"
@@ -55,7 +71,9 @@ import "../styles/global.css";
 						Samedi 4 septembre 2027
 					</p>
 
-					<p class="mt-5 font-serif text-lg italic text-[var(--sage)] sm:text-xl">
+					<p
+						class="mt-5 font-serif text-lg italic text-[var(--sage)] sm:text-xl"
+					>
 						Deux jours à célébrer ensemble
 					</p>
 
@@ -70,11 +88,6 @@ import "../styles/global.css";
 					</a>
 				</div>
 
-				<!-- Decorative botanical corner placeholders -->
-				<div
-					class="pointer-events-none absolute -right-20 -top-10 h-72 w-72 rounded-full bg-[var(--sage)]/10 blur-3xl"
-				></div>
-
 				<div
 					class="pointer-events-none absolute -bottom-20 -left-20 h-80 w-80 rounded-full bg-[var(--terracotta)]/10 blur-3xl"
 				></div>
@@ -83,7 +96,7 @@ import "../styles/global.css";
 			<!-- Welcome -->
 			<section
 				id="bienvenue"
-				class="relative px-8 py-32 sm:px-16"
+				class="relative px-8 pt-20 pb-12 sm:px-16 sm:pt-24 sm:pb-14"
 			>
 				<div class="mx-auto max-w-3xl text-center">
 					<p
@@ -98,9 +111,13 @@ import "../styles/global.css";
 						De vous retrouver
 					</h2>
 
-					<div class="mx-auto my-8 h-px w-16 bg-[var(--terracotta)]/60"></div>
+					<div
+						class="mx-auto my-8 h-px w-16 bg-[var(--terracotta)]/60"
+					></div>
 
-					<p class="font-serif text-xl leading-relaxed text-[var(--text)] sm:text-2xl">
+					<p
+						class="font-serif text-xl leading-relaxed text-[var(--text)] sm:text-2xl"
+					>
 						Nous sommes très heureux de pouvoir partager ces deux journées
 						avec vous. Retrouvez ici toutes les informations pour préparer
 						ce beau week-end à nos côtés.
@@ -108,55 +125,158 @@ import "../styles/global.css";
 				</div>
 			</section>
 
-			<!-- Navigation cards -->
-			<section id="menu" class="px-8 pb-32 sm:px-16">
+			<!-- Navigation -->
+			<section id="menu" class="px-8 pb-16 sm:px-16">
 				<div class="mx-auto grid max-w-5xl gap-6 sm:grid-cols-2">
+					<!-- Wedding -->
 					<a
 						href="/mariage"
-						class="group border border-[var(--sage)]/30 bg-[var(--paper)]/50 p-10 text-center transition-all duration-300 hover:-translate-y-1 hover:border-[var(--terracotta)]"
-					>
+						class="group border border-[var(--sage)]/30 bg-[var(--paper)]/50 p-8 text-center transition-all duration-300 hover:-translate-y-1 hover:border-[var(--terracotta)] hover:bg-[var(--terracotta)]"					>
 						<p class="font-serif text-3xl text-[var(--olive)]">
 							Le mariage
 						</p>
-						<p class="mt-3 text-sm tracking-wide text-[var(--sage)]">
+
+						<p
+							class="mt-3 text-sm tracking-wide text-[var(--sage)] transition-colors group-hover:text-white/80"
+						>
 							Programme &amp; déroulement
 						</p>
 					</a>
 
+					<!-- Venue -->
 					<a
 						href="/lieu"
-						class="group border border-[var(--sage)]/30 bg-[var(--paper)]/50 p-10 text-center transition-all duration-300 hover:-translate-y-1 hover:border-[var(--terracotta)]"
-					>
+						class="group border border-[var(--sage)]/30 bg-[var(--paper)]/50 p-8 text-center transition-all duration-300 hover:-translate-y-1 hover:border-[var(--terracotta)] hover:bg-[var(--terracotta)]"					>
 						<p class="font-serif text-3xl text-[var(--olive)]">
 							Le lieu
 						</p>
-						<p class="mt-3 text-sm tracking-wide text-[var(--sage)]">
+
+						<p
+							class="mt-3 text-sm tracking-wide text-[var(--sage)] transition-colors group-hover:text-white/80"
+						>
 							Accès &amp; informations pratiques
 						</p>
 					</a>
 
+					<!-- Weekend -->
 					<a
 						href="/weekend"
-						class="group border border-[var(--sage)]/30 bg-[var(--paper)]/50 p-10 text-center transition-all duration-300 hover:-translate-y-1 hover:border-[var(--terracotta)]"
-					>
-						<p class="font-serif text-3xl text-[var(--olive)]">
+						class="group border border-[var(--sage)]/30 bg-[var(--paper)]/50 p-8 text-center transition-all duration-300 hover:-translate-y-1 hover:border-[var(--terracotta)] hover:bg-[var(--terracotta)]"					>
+						<p
+							class="font-serif text-3xl text-[var(--olive)] transition-colors group-hover:text-white"
+						>
 							Le week-end
 						</p>
-						<p class="mt-3 text-sm tracking-wide text-[var(--sage)]">
-							Hébergement &amp; bonnes adresses
+
+						<p
+							class="mt-3 text-sm tracking-wide text-[var(--sage)] transition-colors group-hover:text-white/80"
+						>
+							Hébergement, bonnes adresses &amp; activités
 						</p>
 					</a>
 
+					<!-- RSVP -->
 					<a
 						href="/rsvp"
-						class="group border border-[var(--terracotta)] bg-[var(--paper)]/50 p-10 text-center transition-all duration-300 hover:-translate-y-1 hover:bg-[var(--terracotta)] hover:text-white"
-					>
-						<p class="font-serif text-3xl text-[var(--terracotta-dark)] group-hover:text-white">
+						class="group border border-[var(--sage)]/30 bg-[var(--paper)]/50 p-8 text-center transition-all duration-300 hover:-translate-y-1 hover:border-[var(--terracotta)] hover:bg-[var(--terracotta)]"					>
+						<p
+							class="font-serif text-3xl text-[var(--olive)] transition-colors group-hover:text-white"
+						>
 							RSVP
 						</p>
-						<p class="mt-3 text-sm tracking-wide text-[var(--sage)] group-hover:text-white/80">
+
+						<p
+							class="mt-3 text-sm tracking-wide text-[var(--sage)] transition-colors group-hover:text-white/80"
+						>
 							Confirmer votre présence
 						</p>
+					</a>
+				</div>
+
+				<!-- Honeymoon shortcut -->
+				<div class="mx-auto mt-5 max-w-2xl">
+					<a
+						href="#cagnotte"
+							class="group block border border-[var(--sage)]/30 bg-[var(--paper)]/50 px-8 py-6 text-center transition-all duration-300 hover:-translate-y-1 hover:border-[var(--terracotta)] hover:bg-[var(--terracotta)]"					>
+						<p
+							class="font-serif text-2xl text-[var(--olive)] transition-colors group-hover:text-white"
+						>
+							Voyage de noces
+						</p>
+
+						<p
+							class="mt-2 text-sm tracking-wide text-[var(--sage)] transition-colors group-hover:text-white/80"
+						>
+							Participer à notre cagnotte
+						</p>
+					</a>
+				</div>
+			</section>
+
+			<!-- Visual separator -->
+			<div
+				class="mx-auto flex max-w-3xl items-center gap-5 px-8 py-12"
+			>
+				<div class="h-px flex-1 bg-[var(--sage)]/20"></div>
+
+				<span class="text-lg text-[var(--terracotta)]">
+					♥
+				</span>
+
+				<div class="h-px flex-1 bg-[var(--sage)]/20"></div>
+			</div>
+
+			<!-- Honeymoon fund -->
+			<section
+				id="cagnotte"
+				class="scroll-mt-16 px-8 pb-32 pt-12 sm:px-16"
+			>
+				<div
+					class="mx-auto max-w-4xl border border-[var(--terracotta)]/30 bg-[var(--paper)]/40 px-8 py-16 text-center sm:px-16 sm:py-20"
+				>
+					<p
+						class="font-serif text-sm uppercase tracking-[0.4em] text-[var(--sage)]"
+					>
+						Voyage de noces
+					</p>
+
+					<h2
+						class="mt-5 font-serif text-4xl text-[var(--olive)] sm:text-5xl"
+					>
+						Notre prochaine aventure
+					</h2>
+
+					<div
+						class="mx-auto my-8 h-px w-16 bg-[var(--terracotta)]/60"
+					></div>
+
+					<p
+						class="mx-auto max-w-2xl font-serif text-xl leading-relaxed text-[var(--sage)]"
+					>
+						Nous avons déjà tout ce qu’il nous faut à la maison, alors
+						plutôt qu’une liste de mariage, nous avons choisi de mettre
+						en place une cagnotte pour notre voyage de noces.
+					</p>
+
+					<p
+						class="mx-auto mt-4 max-w-2xl font-serif text-xl leading-relaxed text-[var(--sage)]"
+					>
+						Si vous souhaitez contribuer à notre prochaine aventure,
+						vous pouvez y participer ici. Et surtout, aucune obligation —
+						nous sommes déjà très heureux de vous avoir à nos côtés
+						pour le mariage !
+					</p>
+
+					<a
+						href="https://www.leetchi.com/fr/c/jeanne-max-1399369?u=dbc986d6-d0cd-4ca2-870c-01a03d16b4a9&utm_source=copylink&utm_medium=social_sharing"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="mt-10 inline-block bg-[var(--terracotta)] px-9 py-4
+						font-serif text-lg text-white
+						transition-all duration-300
+						hover:-translate-y-1 hover:bg-[var(--terracotta-dark)]"
+					>
+						Participer à la cagnotte →
 					</a>
 				</div>
 			</section>
