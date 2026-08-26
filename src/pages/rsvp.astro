@@ -17,21 +17,229 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 		← Retour
 	</a>
 
-	<header class="py-20 text-center">
-		<p class="font-serif text-sm uppercase tracking-[0.4em] text-[var(--sage)]">
+	<header class="py-16 text-center sm:py-20">
+		<p
+			class="font-serif text-sm uppercase tracking-[0.4em] text-[var(--sage)]"
+		>
 			Nous espérons vous retrouver
 		</p>
 
-		<h1 class="mt-5 font-serif text-6xl text-[var(--olive)] sm:text-7xl">
+		<h1
+			class="mt-5 font-serif text-6xl text-[var(--olive)] sm:text-7xl"
+		>
 			RSVP
 		</h1>
 
-		<div class="mx-auto my-8 h-px w-16 bg-[var(--terracotta)]/60"></div>
+		<div
+			class="mx-auto my-8 h-px w-16 bg-[var(--terracotta)]/60"
+		></div>
 
 		<p class="font-serif text-xl text-[var(--sage)]">
 			Merci de nous répondre avant le 1er juin 2027.
 		</p>
 	</header>
 
-	<!-- Keep your current form here -->
+	<!-- RSVP form -->
+	<section class="pb-24">
+		<form class="space-y-10">
+
+			<!-- Name -->
+			<div>
+				<label
+					for="name"
+					class="mb-3 block font-serif text-lg text-[var(--olive)]"
+				>
+					Nom et prénom
+				</label>
+
+				<input
+					type="text"
+					id="name"
+					name="name"
+					required
+					autocomplete="name"
+					class="w-full border border-[var(--sage)]/30 bg-[var(--paper)]/50 px-5 py-4
+					font-serif text-lg text-[var(--olive)] outline-none
+					transition-colors duration-300
+					focus:border-[var(--terracotta)]"
+				/>
+			</div>
+
+			<!-- Attendance -->
+			<fieldset>
+				<legend
+					class="mb-4 font-serif text-lg text-[var(--olive)]"
+				>
+					Serez-vous parmi nous ?
+				</legend>
+
+				<div class="space-y-3">
+					<label
+						class="flex cursor-pointer items-center gap-4 border border-[var(--sage)]/25 bg-[var(--paper)]/40 px-5 py-4 transition-colors hover:border-[var(--terracotta)]"
+					>
+						<input
+							type="radio"
+							name="attendance"
+							value="yes"
+							required
+							class="accent-[var(--terracotta)]"
+						/>
+
+						<span class="font-serif text-lg text-[var(--sage)]">
+							Avec plaisir !
+						</span>
+					</label>
+
+					<label
+						class="flex cursor-pointer items-center gap-4 border border-[var(--sage)]/25 bg-[var(--paper)]/40 px-5 py-4 transition-colors hover:border-[var(--terracotta)]"
+					>
+						<input
+							type="radio"
+							name="attendance"
+							value="no"
+							class="accent-[var(--terracotta)]"
+						/>
+
+						<span class="font-serif text-lg text-[var(--sage)]">
+							Malheureusement, nous ne pourrons pas être présents.
+						</span>
+					</label>
+				</div>
+			</fieldset>
+
+			<!-- Number of guests -->
+			<div>
+				<label
+					for="guests"
+					class="mb-3 block font-serif text-lg text-[var(--olive)]"
+				>
+					Nombre de personnes
+				</label>
+
+				<select
+					id="guests"
+					name="guests"
+					class="w-full border border-[var(--sage)]/30 bg-[var(--paper)]/50 px-5 py-4
+					font-serif text-lg text-[var(--olive)] outline-none
+					transition-colors duration-300
+					focus:border-[var(--terracotta)]"
+				>
+					<option value="1">1 personne</option>
+					<option value="2">2 personnes</option>
+					<option value="3">3 personnes</option>
+					<option value="4">4 personnes</option>
+					<option value="5">5 personnes</option>
+				</select>
+			</div>
+
+			<!-- Sunday -->
+			<fieldset>
+				<legend
+					class="mb-4 font-serif text-lg text-[var(--olive)]"
+				>
+					Serez-vous également présents le dimanche ?
+				</legend>
+
+				<div class="flex flex-col gap-3 sm:flex-row">
+					<label
+						class="flex flex-1 cursor-pointer items-center gap-4 border border-[var(--sage)]/25 bg-[var(--paper)]/40 px-5 py-4 transition-colors hover:border-[var(--terracotta)]"
+					>
+						<input
+							type="radio"
+							name="sunday"
+							value="yes"
+							class="accent-[var(--terracotta)]"
+						/>
+
+						<span class="font-serif text-lg text-[var(--sage)]">
+							Oui
+						</span>
+					</label>
+
+					<label
+						class="flex flex-1 cursor-pointer items-center gap-4 border border-[var(--sage)]/25 bg-[var(--paper)]/40 px-5 py-4 transition-colors hover:border-[var(--terracotta)]"
+					>
+						<input
+							type="radio"
+							name="sunday"
+							value="no"
+							class="accent-[var(--terracotta)]"
+						/>
+
+						<span class="font-serif text-lg text-[var(--sage)]">
+							Non
+						</span>
+					</label>
+				</div>
+			</fieldset>
+
+			<!-- Dietary requirements -->
+			<div>
+				<label
+					for="dietary"
+					class="mb-3 block font-serif text-lg text-[var(--olive)]"
+				>
+					Allergies ou régime alimentaire
+				</label>
+
+				<textarea
+					id="dietary"
+					name="dietary"
+					rows="3"
+					placeholder="Végétarien, allergies, intolérances..."
+					class="w-full resize-none border border-[var(--sage)]/30 bg-[var(--paper)]/50 px-5 py-4
+					font-serif text-lg text-[var(--olive)] outline-none
+					placeholder:text-[var(--sage)]/50
+					transition-colors duration-300
+					focus:border-[var(--terracotta)]"
+				></textarea>
+			</div>
+
+			<!-- Message -->
+			<div>
+				<label
+					for="message"
+					class="mb-3 block font-serif text-lg text-[var(--olive)]"
+				>
+					Un petit mot
+					<span class="text-[var(--sage)]/60">(facultatif)</span>
+				</label>
+
+				<textarea
+					id="message"
+					name="message"
+					rows="4"
+					class="w-full resize-none border border-[var(--sage)]/30 bg-[var(--paper)]/50 px-5 py-4
+					font-serif text-lg text-[var(--olive)] outline-none
+					transition-colors duration-300
+					focus:border-[var(--terracotta)]"
+				></textarea>
+			</div>
+
+			<!-- Submit -->
+			<div class="pt-4 text-center">
+				<button
+					type="submit"
+					class="border border-[var(--terracotta)] px-10 py-4
+					font-serif text-lg text-[var(--terracotta-dark)]
+					transition-all duration-300
+					hover:bg-[var(--terracotta)] hover:text-white"
+				>
+					Envoyer notre réponse
+				</button>
+			</div>
+
+		</form>
+
+		<!-- Decorative ending -->
+		<div class="mx-auto mt-16 flex max-w-xs items-center gap-4">
+			<div class="h-px flex-1 bg-[var(--sage)]/20"></div>
+
+			<span class="text-sm text-[var(--terracotta)]">
+				♥
+			</span>
+
+			<div class="h-px flex-1 bg-[var(--sage)]/20"></div>
+		</div>
+	</section>
 </BaseLayout>
