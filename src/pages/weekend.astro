@@ -265,111 +265,214 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 		</div>
 	</section>
 
+<!-- ========================= -->
+<!-- PROFITER DE LA RÉGION     -->
+<!-- ========================= -->
 
-	<!-- ========================= -->
-	<!-- PROFITER DE LA RÉGION     -->
-	<!-- ========================= -->
+    <section class="relative overflow-visible pb-56 pt-4 sm:pb-64">
 
-	<section class="pb-24">
-		<div class="text-center">
-			<p
-				class="font-serif text-sm uppercase tracking-[0.3em] text-[var(--terracotta)]"
-			>
-				Si vous restez quelques jours
-			</p>
+        <!-- Vineyard illustration -->
+        <img
+            src="/images/vignoble-loire.png"
+            alt=""
+            aria-hidden="true"
+            class="pointer-events-none absolute -bottom-20 z-0
+            w-[280px] opacity-90
+            sm:w-[380px]
+            md:w-[480px]
+            lg:w-[560px]
+            left-[calc((100vw-100%)/-2)]"
+        />
 
-			<h2
-				class="mt-4 font-serif text-4xl text-[var(--olive)]"
-			>
-				Profiter de la région
-			</h2>
-
-			<p
-				class="mx-auto mt-5 max-w-2xl leading-relaxed text-[var(--sage)]"
-			>
-				Si vous souhaitez prolonger le week-end, voici quelques idées
-				pour découvrir les environs et les châteaux de la Loire.
-			</p>
-		</div>
-
-
-		<div class="mt-12 grid gap-6 md:grid-cols-3">
-
-			<!-- Chaumont -->
-			<div
-				class="border border-[var(--sage)]/25 bg-[var(--paper)]/60 p-8"
-			>
-				<p
-					class="font-serif text-sm uppercase tracking-[0.3em] text-[var(--terracotta)]"
-				>
-					À proximité
-				</p>
-
-				<h3
-					class="mt-3 font-serif text-3xl text-[var(--olive)]"
-				>
-					Chaumont-sur-Loire
-				</h3>
-
-				<p
-					class="mt-4 leading-relaxed text-[var(--sage)]"
-				>
-					Son château, ses jardins et le Domaine de Chaumont-sur-Loire
-					sont parfaits pour une promenade.
-				</p>
-			</div>
+        <!-- Chambord sticky note -->
+        <img
+            src="/images/chambord-sticky.png"
+            alt=""
+            aria-hidden="true"
+            class="pointer-events-none absolute
+            right-[calc((100vw-100%)/-2)]
+            top-[100px]
+            z-0
+            w-[260px]
+            sm:w-[340px]
+            md:w-[420px]
+            lg:w-[500px]"
+        />
 
 
-			<!-- Blois -->
-			<div
-				class="border border-[var(--sage)]/25 bg-[var(--paper)]/60 p-8"
-			>
-				<p
-					class="font-serif text-sm uppercase tracking-[0.3em] text-[var(--terracotta)]"
-				>
-					Ville &amp; château
-				</p>
+        <div class="relative z-10">
+            <div class="text-center">
+                <p
+                    class="font-serif text-sm uppercase tracking-[0.3em] text-[var(--terracotta)]"
+                >
+                    Si vous restez quelques jours
+                </p>
 
-				<h3
-					class="mt-3 font-serif text-3xl text-[var(--olive)]"
-				>
-					Blois
-				</h3>
+                <h2
+                    class="mt-4 font-serif text-4xl text-[var(--olive)]"
+                >
+                    Profiter de la région
+                </h2>
 
-				<p
-					class="mt-4 leading-relaxed text-[var(--sage)]"
-				>
-					Une jolie ville au bord de la Loire, idéale pour déjeuner,
-					se promener dans le centre historique et visiter le château royal.
-				</p>
-			</div>
+                <p
+                    class="mx-auto mt-5 max-w-2xl leading-relaxed text-[var(--sage)]"
+                >
+                    Si vous souhaitez prolonger le week-end, voici quelques idées
+                    pour découvrir les environs, les châteaux de la Loire et
+                    quelques spécialités de la région.
+                </p>
+            </div>
 
+            <div class="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                <!-- Chaumont -->
+                <div
+                    class="border border-[var(--sage)]/25 bg-[var(--paper)]/80 p-8"
+                >
+                    <p
+                        class="font-serif text-sm uppercase tracking-[0.3em] text-[var(--terracotta)]"
+                    >
+                        À proximité
+                    </p>
 
-			<!-- Amboise -->
-			<div
-				class="border border-[var(--sage)]/25 bg-[var(--paper)]/60 p-8"
-			>
-				<p
-					class="font-serif text-sm uppercase tracking-[0.3em] text-[var(--terracotta)]"
-				>
-					À découvrir
-				</p>
+                    <h3
+                        class="mt-3 font-serif text-3xl text-[var(--olive)]"
+                    >
+                        Chaumont-sur-Loire
+                    </h3>
 
-				<h3
-					class="mt-3 font-serif text-3xl text-[var(--olive)]"
-				>
-					Amboise
-				</h3>
+                    <p
+                        class="mt-4 leading-relaxed text-[var(--sage)]"
+                    >
+                        Son château, ses jardins et le Domaine de Chaumont-sur-Loire
+                        sont parfaits pour une promenade.
+                    </p>
+                </div>
 
-				<p
-					class="mt-4 leading-relaxed text-[var(--sage)]"
-				>
-					Une belle étape sur la Loire, avec son château,
-					ses petites rues et de nombreux restaurants.
-				</p>
-			</div>
+                <!-- Blois -->
+                <div
+                    class="border border-[var(--sage)]/25 bg-[var(--paper)]/80 p-8"
+                >
+                    <p
+                        class="font-serif text-sm uppercase tracking-[0.3em] text-[var(--terracotta)]"
+                    >
+                        Ville &amp; château
+                    </p>
 
-		</div>
-	</section>
+                    <h3
+                        class="mt-3 font-serif text-3xl text-[var(--olive)]"
+                    >
+                        Blois
+                    </h3>
+
+                    <p
+                        class="mt-4 leading-relaxed text-[var(--sage)]"
+                    >
+                        Une jolie ville au bord de la Loire, idéale pour déjeuner,
+                        se promener dans le centre historique et visiter le château royal.
+                    </p>
+                </div>
+
+                <!-- Amboise -->
+                <div
+                    class="border border-[var(--sage)]/25 bg-[var(--paper)]/80 p-8"
+                >
+                    <p
+                        class="font-serif text-sm uppercase tracking-[0.3em] text-[var(--terracotta)]"
+                    >
+                        À découvrir
+                    </p>
+
+                    <h3
+                        class="mt-3 font-serif text-3xl text-[var(--olive)]"
+                    >
+                        Amboise
+                    </h3>
+
+                    <p
+                        class="mt-4 leading-relaxed text-[var(--sage)]"
+                    >
+                        Une belle étape sur la Loire, avec son château,
+                        ses petites rues et de nombreux restaurants.
+                    </p>
+                </div>
+
+                <!-- Chambord -->
+                <div
+                    class="border border-[var(--sage)]/25 bg-[var(--paper)]/80 p-8"
+                >
+                    <p
+                        class="font-serif text-sm uppercase tracking-[0.3em] text-[var(--terracotta)]"
+                    >
+                        Incontournable
+                    </p>
+
+                    <h3
+                        class="mt-3 font-serif text-3xl text-[var(--olive)]"
+                    >
+                        Château de Chambord
+                    </h3>
+
+                    <p
+                        class="mt-4 leading-relaxed text-[var(--sage)]"
+                    >
+                        L'un des châteaux les plus emblématiques de la Loire,
+                        connu pour son architecture Renaissance, son célèbre escalier
+                        et son vaste domaine.
+                    </p>
+                </div>
+
+                <!-- Chenonceau -->
+                <div
+                    class="border border-[var(--sage)]/25 bg-[var(--paper)]/80 p-8"
+                >
+                    <p
+                        class="font-serif text-sm uppercase tracking-[0.3em] text-[var(--terracotta)]"
+                    >
+                        Sur le Cher
+                    </p>
+
+                    <h3
+                        class="mt-3 font-serif text-3xl text-[var(--olive)]"
+                    >
+                        Château de Chenonceau
+                    </h3>
+
+                    <p
+                        class="mt-4 leading-relaxed text-[var(--sage)]"
+                    >
+                        Un château construit au-dessus du Cher, entouré de jardins.
+                        Une très belle visite si vous avez envie de découvrir un autre
+                        visage des châteaux de la Loire.
+                    </p>
+                </div>
+
+                <!-- Wine tasting -->
+                <div
+                    class="border border-[var(--sage)]/25 bg-[var(--paper)]/80 p-8"
+                >
+                    <p
+                        class="font-serif text-sm uppercase tracking-[0.3em] text-[var(--terracotta)]"
+                    >
+                        Vignobles
+                    </p>
+
+                    <h3
+                        class="mt-3 font-serif text-3xl text-[var(--olive)]"
+                    >
+                        Dégustation de vins
+                    </h3>
+
+                    <p
+                        class="mt-4 leading-relaxed text-[var(--sage)]"
+                    >
+                        Profitez de votre séjour pour découvrir les vins de Loire
+                        et visiter l'un des nombreux domaines viticoles de la région.
+                        Une dégustation peut être une très bonne façon de passer
+                        quelques heures entre deux visites.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
 </BaseLayout>
