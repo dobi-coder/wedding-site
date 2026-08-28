@@ -1,5 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 ---
 
 <BaseLayout
@@ -17,7 +19,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 			>
 				<!-- Watercolor lilies -->
 				<img
-					src="/images/lilies.png"
+					src={`${base}/images/lilies.png`}
 					alt=""
 					aria-hidden="true"
 					class="pointer-events-none absolute right-0 top-0 z-0 w-[260px] select-none sm:w-[380px] lg:w-[500px]"
@@ -103,7 +105,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 				<div class="mx-auto grid max-w-5xl gap-6 sm:grid-cols-2">
 					<!-- Wedding -->
 					<a
-						href="/en/wedding"
+						href={`${base}/en/wedding`}
 						class="group border border-[var(--sage)]/30 bg-[var(--paper)]/50 p-8 text-center transition-all duration-300 hover:-translate-y-1 hover:border-[var(--terracotta)] hover:bg-[var(--terracotta)]"					>
 						<p class="font-serif text-3xl text-[var(--olive)]">
 							The wedding
@@ -118,7 +120,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 
 					<!-- Venue -->
 					<a
-						href="/en/venue"
+						href={`${base}/en/venue`}
 						class="group border border-[var(--sage)]/30 bg-[var(--paper)]/50 p-8 text-center transition-all duration-300 hover:-translate-y-1 hover:border-[var(--terracotta)] hover:bg-[var(--terracotta)]"					>
 						<p class="font-serif text-3xl text-[var(--olive)]">
 							The venue
@@ -133,7 +135,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 
 					<!-- Weekend -->
 					<a
-						href="/en/weekend"
+						href={`${base}/en/weekend`}
 						class="group border border-[var(--sage)]/30 bg-[var(--paper)]/50 p-8 text-center transition-all duration-300 hover:-translate-y-1 hover:border-[var(--terracotta)] hover:bg-[var(--terracotta)]"					>
 						<p
 							class="font-serif text-3xl text-[var(--olive)] transition-colors group-hover:text-white"
@@ -150,7 +152,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 
 					<!-- RSVP -->
 					<a
-						href="/en/rsvp"
+						href={`${base}/en/rsvp`}
 						class="group border border-[var(--sage)]/30 bg-[var(--paper)]/50 p-8 text-center transition-all duration-300 hover:-translate-y-1 hover:border-[var(--terracotta)] hover:bg-[var(--terracotta)]"					>
 						<p
 							class="font-serif text-3xl text-[var(--olive)] transition-colors group-hover:text-white"

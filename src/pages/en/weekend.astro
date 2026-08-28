@@ -1,5 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 ---
 
 <BaseLayout
@@ -12,7 +14,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 >
 	<!-- Back -->
 	<a
-		href="/en/#welcome"
+		href={`${base}/en/#welcome`}
 		class="font-serif text-sm uppercase tracking-[0.3em] text-[var(--sage)] transition-colors hover:text-[var(--terracotta)]"
 	>
 		← Back

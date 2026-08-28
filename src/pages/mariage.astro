@@ -1,5 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 ---
 
 <BaseLayout
@@ -11,7 +13,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 	maxWidth="max-w-4xl"
 >
 	<a
-		href="/#bienvenue"
+		href={`${base}/#bienvenue`}
 		class="font-serif text-sm uppercase tracking-[0.3em] text-[var(--sage)] transition-colors hover:text-[var(--terracotta)]"
 	>
 		← Retour
@@ -35,7 +37,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
     <div class="flex justify-center pb-12">
         <img
-            src="/images/champagne-lilies.png"
+            src={`${base}/images/champagne-lilies.png`}
             alt=""
             aria-hidden="true"
             class="w-52 object-contain sm:w-64 lg:w-72"

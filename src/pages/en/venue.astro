@@ -1,6 +1,8 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import TransportIcon from "../../components/TransportIcon.astro";
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 ---
 
 <BaseLayout
@@ -12,7 +14,7 @@ import TransportIcon from "../../components/TransportIcon.astro";
 	maxWidth="max-w-5xl"
 >
 	<a
-		href="/en/#welcome"
+		href={`${base}/en/#welcome`}
 		class="font-serif text-sm uppercase tracking-[0.3em] text-[var(--sage)] transition-colors hover:text-[var(--terracotta)]"
 	>
 		← Back
@@ -37,7 +39,7 @@ import TransportIcon from "../../components/TransportIcon.astro";
 	<section class="py-4 sm:py-8">
         <div class="mx-auto max-w-4xl">
             <img
-                src="/images/chateau-sticky-note.png"
+                src={`${base}/images/chateau-sticky-note.png`}
                 alt="Photo of Château de Saint-Cyr-du-Gault presented in a travel-journal style"
                 class="mx-auto w-full max-w-4xl object-contain"
             />

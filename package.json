@@ -6,8 +6,12 @@
     "node": ">=22.12.0"
   },
   "scripts": {
-    "dev": "astro dev",
+    "dev": "TEST_BUILD=true astro dev --background",
+    "dev:status": "astro dev status",
+    "dev:logs": "astro dev logs",
+    "dev:stop": "astro dev stop",
     "build": "astro build",
+    "build:test": "TEST_BUILD=true astro build",
     "preview": "astro preview",
     "astro": "astro"
   },

@@ -1,5 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 ---
 
 <BaseLayout
@@ -17,7 +19,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 			>
 				<!-- Watercolor lilies -->
 				<img
-					src="/images/lilies.png"
+					src={`${base}/images/lilies.png`}
 					alt=""
 					aria-hidden="true"
 					class="pointer-events-none absolute right-0 top-0 z-0 w-[260px] select-none sm:w-[380px] lg:w-[500px]"
@@ -25,7 +27,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
 				<!-- Couple photo -->
 				<img
-					src="/images/jeanne-maxime-polaroid.png"
+					src={`${base}/images/jeanne-maxime-polaroid.png`}
 					alt="Jeanne et Maxime"
 					class="pointer-events-none absolute
 						left-[-30px] top-[210px] z-0
@@ -117,7 +119,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 				<div class="mx-auto grid max-w-5xl gap-6 sm:grid-cols-2">
 					<!-- Wedding -->
 					<a
-						href="/mariage"
+						href={`${base}/mariage`}
 						class="group border border-[var(--sage)]/30 bg-[var(--paper)]/50 p-8 text-center transition-all duration-300 hover:-translate-y-1 hover:border-[var(--terracotta)] hover:bg-[var(--terracotta)]"					>
 						<p class="font-serif text-3xl text-[var(--olive)]">
 							Le mariage
@@ -132,7 +134,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
 					<!-- Venue -->
 					<a
-						href="/lieu"
+						href={`${base}/lieu`}
 						class="group border border-[var(--sage)]/30 bg-[var(--paper)]/50 p-8 text-center transition-all duration-300 hover:-translate-y-1 hover:border-[var(--terracotta)] hover:bg-[var(--terracotta)]"					>
 						<p class="font-serif text-3xl text-[var(--olive)]">
 							Le lieu
@@ -147,7 +149,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
 					<!-- Weekend -->
 					<a
-						href="/weekend"
+						href={`${base}/weekend`}
 						class="group border border-[var(--sage)]/30 bg-[var(--paper)]/50 p-8 text-center transition-all duration-300 hover:-translate-y-1 hover:border-[var(--terracotta)] hover:bg-[var(--terracotta)]"					>
 						<p
 							class="font-serif text-3xl text-[var(--olive)] transition-colors group-hover:text-white"
@@ -164,7 +166,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
 					<!-- RSVP -->
 					<a
-						href="/rsvp"
+						href={`${base}/rsvp`}
 						class="group border border-[var(--sage)]/30 bg-[var(--paper)]/50 p-8 text-center transition-all duration-300 hover:-translate-y-1 hover:border-[var(--terracotta)] hover:bg-[var(--terracotta)]"					>
 						<p
 							class="font-serif text-3xl text-[var(--olive)] transition-colors group-hover:text-white"
@@ -220,7 +222,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 			>
 			<!-- Bottom-left botanical decoration -->
 				<img
-					src="/images/botanical-bottom-left.png"
+					src={`${base}/images/botanical-bottom-left.png`}
 					alt=""
 					aria-hidden="true"
 					class="pointer-events-none absolute bottom-0 left-0 z-0
