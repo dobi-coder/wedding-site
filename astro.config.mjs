@@ -1,9 +1,13 @@
 import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 
+const isTestBuild = process.env.TEST_BUILD === 'true';
+
 export default defineConfig({
-    site: "https://dobi-coder.github.io",
-    base: "/wedding-site",
+	site: isTestBuild
+		? 'http://localhost:4321'
+		: 'https://dobi-coder.github.io',
+	base: isTestBuild ? '/' : '/wedding-site',
 	vite: {
 		plugins: [tailwindcss()],
 	},
