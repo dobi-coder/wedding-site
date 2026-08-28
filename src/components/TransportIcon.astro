@@ -1,0 +1,51 @@
+---
+interface Props {
+	type: "train" | "car" | "plane";
+}
+
+const { type } = Astro.props;
+---
+
+<span
+	class="inline-flex h-9 w-9 shrink-0 items-center justify-center text-[var(--terracotta-dark)]"
+	aria-hidden="true"
+>
+	{
+		type === "train" && (
+			<svg viewBox="0 0 40 40" fill="none" class="h-full w-full">
+				<path d="M12.2 29.4c-1.3-1.8-2-4.4-2-7.8V10.9c0-3.1 2.7-5.2 9.8-5.2s9.8 2.1 9.8 5.2v10.7c0 3.4-.7 6-2 7.8" />
+				<path d="M11 14.5c5.8-.7 12-.7 18 0M12 23.8c5.2.6 10.8.6 16 0M16 9.8h8" />
+				<circle cx="14.8" cy="19.5" r="1.1" fill="currentColor" stroke="none" />
+				<circle cx="25.2" cy="19.5" r="1.1" fill="currentColor" stroke="none" />
+				<path d="m14 28-4 6m16-6 4 6M12.2 32h15.6" />
+			</svg>
+		)}
+
+	{
+		type === "car" && (
+			<svg viewBox="0 0 40 40" fill="none" class="h-full w-full">
+				<path d="M7.2 24.8v-5.4c0-1.6 1.1-2.8 2.8-3.1l3-5.7c.7-1.3 1.8-2 3.3-2h7.6c1.5 0 2.6.7 3.3 2l2.9 5.7c1.8.3 2.8 1.5 2.8 3.1v5.4" />
+				<path d="M8.2 17.3c7.7-.9 15.9-.9 23.6 0M11 25h18" />
+				<circle cx="12.2" cy="22" r="1.2" fill="currentColor" stroke="none" />
+				<circle cx="27.8" cy="22" r="1.2" fill="currentColor" stroke="none" />
+				<path d="M10.2 25v3.7m19.6-3.7v3.7M14.1 11.1l-2.5 5.4m14.3-5.4 2.5 5.4" />
+			</svg>
+		)}
+
+	{
+		type === "plane" && (
+			<svg viewBox="0 0 40 40" fill="none" class="h-full w-full">
+				<path d="M33.7 18.3c1.5.8 1.5 2.5 0 3.3l-9.2 2.2-7.2 9.1-2.6.4 3.8-9.5-7.8-1.3-3.2 3.2-2 .2 1.3-5.8-1.3-5.8 2 .2 3.2 3.2 7.8-1.3-3.8-9.5 2.6.4 7.2 9.1 9.2 2.2Z" />
+				<path d="M27.7 18.4c1.3.5 1.3 2.7 0 3.2" />
+			</svg>
+		)}
+</span>
+
+<style>
+	svg {
+		stroke: currentColor;
+		stroke-width: 1.55;
+		stroke-linecap: round;
+		stroke-linejoin: round;
+	}
+</style>
