@@ -36,28 +36,21 @@ body {
 	display: block;
 	border: 1px solid color-mix(in srgb, var(--sage) 30%, transparent);
 	background: color-mix(in srgb, var(--paper) 45%, transparent);
-	padding: 2rem 3.5rem 2rem 2rem;
+	padding: 2rem;
 	text-align: left;
-	transition: border-color 250ms ease, transform 250ms ease;
-}
-
-.editorial-card::after {
-	content: "→";
-	position: absolute;
-	right: 1.75rem;
-	top: 50%;
-	color: var(--terracotta-dark);
-	font-family: "Cormorant Garamond", serif;
-	font-size: 1.5rem;
-	transform: translateY(-50%);
-	transition: transform 250ms ease;
+	transition: background-color 250ms ease, border-color 250ms ease, transform 250ms ease;
 }
 
 .editorial-card:hover {
+	background: var(--terracotta);
 	border-color: var(--terracotta);
 	transform: translateY(-2px);
 }
 
-.editorial-card:hover::after {
-	transform: translate(0.25rem, -50%);
+.editorial-card p {
+	transition: color 250ms ease;
+}
+
+.editorial-card:hover p {
+	color: white;
 }
