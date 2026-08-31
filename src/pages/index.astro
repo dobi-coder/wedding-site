@@ -63,7 +63,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 					<p
 						class="mt-5 font-serif text-lg italic text-[var(--sage)] sm:text-xl"
 					>
-						Deux jours à célébrer ensemble
+						Saint-Cyr-du-Gault · Loir-et-Cher
 					</p>
 
 					<a
@@ -91,13 +91,13 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 					<p
 						class="font-serif text-sm uppercase tracking-[0.4em] text-[var(--sage)]"
 					>
-						Nous avons hâte
+						Informations pratiques
 					</p>
 
 					<h2
 						class="mt-5 font-serif text-5xl text-[var(--olive)] sm:text-6xl"
 					>
-						De vous retrouver
+						Rendez-vous en septembre
 					</h2>
 
 					<div
@@ -107,9 +107,8 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 					<p
 						class="font-serif text-xl leading-relaxed text-[var(--text)] sm:text-2xl"
 					>
-						Nous sommes très heureux de pouvoir partager ces deux journées
-						avec vous. Retrouvez ici toutes les informations pour préparer
-						ce beau week-end à nos côtés.
+						Le programme, les informations d’accès et nos recommandations
+						pour organiser votre week-end dans le Loir-et-Cher.
 					</p>
 				</div>
 			</section>
@@ -120,13 +119,15 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 					<!-- Wedding -->
 					<a
 						href={`${base}/mariage`}
-						class="group border border-[var(--sage)]/30 bg-[var(--paper)]/50 p-8 text-center transition-all duration-300 hover:-translate-y-1 hover:border-[var(--terracotta)] hover:bg-[var(--terracotta)]"					>
+						class="editorial-card"
+					>
+						<p class="mb-4 text-xs tracking-[0.25em] text-[var(--terracotta-dark)]">01</p>
 						<p class="font-serif text-3xl text-[var(--olive)]">
 							Le mariage
 						</p>
 
 						<p
-							class="mt-3 text-sm tracking-wide text-[var(--sage)] transition-colors group-hover:text-white/80"
+							class="mt-3 text-sm tracking-wide text-[var(--sage)]"
 						>
 							Programme &amp; déroulement
 						</p>
@@ -135,13 +136,15 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 					<!-- Venue -->
 					<a
 						href={`${base}/lieu`}
-						class="group border border-[var(--sage)]/30 bg-[var(--paper)]/50 p-8 text-center transition-all duration-300 hover:-translate-y-1 hover:border-[var(--terracotta)] hover:bg-[var(--terracotta)]"					>
+						class="editorial-card"
+					>
+						<p class="mb-4 text-xs tracking-[0.25em] text-[var(--terracotta-dark)]">02</p>
 						<p class="font-serif text-3xl text-[var(--olive)]">
 							Le lieu
 						</p>
 
 						<p
-							class="mt-3 text-sm tracking-wide text-[var(--sage)] transition-colors group-hover:text-white/80"
+							class="mt-3 text-sm tracking-wide text-[var(--sage)]"
 						>
 							Accès &amp; informations pratiques
 						</p>
@@ -150,15 +153,17 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 					<!-- Weekend -->
 					<a
 						href={`${base}/weekend`}
-						class="group border border-[var(--sage)]/30 bg-[var(--paper)]/50 p-8 text-center transition-all duration-300 hover:-translate-y-1 hover:border-[var(--terracotta)] hover:bg-[var(--terracotta)]"					>
+						class="editorial-card"
+					>
+						<p class="mb-4 text-xs tracking-[0.25em] text-[var(--terracotta-dark)]">03</p>
 						<p
-							class="font-serif text-3xl text-[var(--olive)] transition-colors group-hover:text-white"
+							class="font-serif text-3xl text-[var(--olive)]"
 						>
 							Le week-end
 						</p>
 
 						<p
-							class="mt-3 text-sm tracking-wide text-[var(--sage)] transition-colors group-hover:text-white/80"
+							class="mt-3 text-sm tracking-wide text-[var(--sage)]"
 						>
 							Hébergement, bonnes adresses &amp; activités
 						</p>
@@ -167,15 +172,17 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 					<!-- RSVP -->
 					<a
 						href={`${base}/rsvp`}
-						class="group border border-[var(--sage)]/30 bg-[var(--paper)]/50 p-8 text-center transition-all duration-300 hover:-translate-y-1 hover:border-[var(--terracotta)] hover:bg-[var(--terracotta)]"					>
+						class="editorial-card"
+					>
+						<p class="mb-4 text-xs tracking-[0.25em] text-[var(--terracotta-dark)]">04</p>
 						<p
-							class="font-serif text-3xl text-[var(--olive)] transition-colors group-hover:text-white"
+							class="font-serif text-3xl text-[var(--olive)]"
 						>
 							RSVP
 						</p>
 
 						<p
-							class="mt-3 text-sm tracking-wide text-[var(--sage)] transition-colors group-hover:text-white/80"
+							class="mt-3 text-sm tracking-wide text-[var(--sage)]"
 						>
 							Confirmer votre présence
 						</p>
@@ -186,15 +193,17 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 				<div class="mx-auto mt-5 max-w-2xl">
 					<a
 						href="#cagnotte"
-							class="group block border border-[var(--sage)]/30 bg-[var(--paper)]/50 px-8 py-6 text-center transition-all duration-300 hover:-translate-y-1 hover:border-[var(--terracotta)] hover:bg-[var(--terracotta)]"					>
+						class="editorial-card"
+					>
+						<p class="mb-4 text-xs tracking-[0.25em] text-[var(--terracotta-dark)]">05</p>
 						<p
-							class="font-serif text-3xl text-[var(--olive)] transition-colors group-hover:text-white"
+							class="font-serif text-3xl text-[var(--olive)]"
 						>
 							Le voyage de noces
 						</p>
 
 						<p
-							class="mt-3 text-sm tracking-wide text-[var(--sage)] transition-colors group-hover:text-white/80"
+							class="mt-3 text-sm tracking-wide text-[var(--sage)]"
 						>
 							Participer à notre cagnotte
 						</p>
@@ -208,9 +217,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 			>
 				<div class="h-px flex-1 bg-[var(--sage)]/20"></div>
 
-				<span class="text-lg text-[var(--terracotta)]">
-					♥
-				</span>
+				<span class="font-serif text-sm tracking-[0.3em] text-[var(--terracotta-dark)]">J · M</span>
 
 				<div class="h-px flex-1 bg-[var(--sage)]/20"></div>
 			</div>
@@ -220,17 +227,6 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 				id="cagnotte"
 				class="relative scroll-mt-16 overflow-hidden px-8 pb-32 pt-12 sm:px-16"
 			>
-			<!-- Bottom-left botanical decoration -->
-				<img
-					src={`${base}/images/botanical-bottom-left.png`}
-					alt=""
-					aria-hidden="true"
-					class="pointer-events-none absolute bottom-0 left-0 z-0
-					w-[220px] opacity-90
-					sm:w-[300px]
-					md:w-[360px]
-					lg:w-[420px]"
-				/>
 				<div
 					class="mx-auto max-w-4xl border border-[var(--terracotta)]/30 bg-[var(--paper)]/40 px-8 py-16 text-center sm:px-16 sm:py-20"
 				>
@@ -243,7 +239,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 					<h2
 						class="mt-5 font-serif text-4xl text-[var(--olive)] sm:text-5xl"
 					>
-						Notre prochaine aventure
+						Voyage de noces
 					</h2>
 
 					<div
@@ -261,10 +257,8 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 					<p
 						class="mx-auto mt-4 max-w-2xl font-serif text-xl leading-relaxed text-[var(--sage)]"
 					>
-						Si vous souhaitez contribuer à notre prochaine aventure,
-						vous pouvez y participer ici. Et surtout, aucune obligation —
-						nous sommes déjà très heureux de vous avoir à nos côtés
-						pour le mariage !
+						Si vous souhaitez participer, vous trouverez la cagnotte ci-dessous.
+						Votre présence reste, bien sûr, l’essentiel.
 					</p>
 
 					<a
