@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
 import LanguageSwitch from "../components/LanguageSwitch.astro";
+import { ClientRouter, fade } from "astro:transitions";
 
 interface Props {
 	title: string;
@@ -25,9 +26,10 @@ const {
 const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 const prefixedFrenchUrl = `${base}${frenchUrl}`;
 const prefixedEnglishUrl = `${base}${englishUrl}`;
+const pageTransition = fade({ duration: "0.35s" });
 ---
 
-<html lang={language}>
+<html lang={language} transition:animate={pageTransition}>
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width" />
@@ -35,6 +37,7 @@ const prefixedEnglishUrl = `${base}${englishUrl}`;
 
 		<link rel="icon" type="image/svg+xml" href={`${base}/favicon.svg`} />
 		<link rel="icon" href={`${base}/favicon.ico`} />
+		<ClientRouter />
 
 		<title>{title}</title>
 	</head>

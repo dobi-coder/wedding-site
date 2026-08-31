@@ -25,7 +25,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 		<p
 			class="font-serif text-sm uppercase tracking-[0.4em] text-[var(--sage)]"
 		>
-			Make the most of your stay
+			Stay &amp; accommodation
 		</p>
 
 		<h1
@@ -105,7 +105,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 
 			<!-- Hameau de Céline -->
 			<div
-				class="border border-[var(--sage)]/25 bg-[var(--paper)]/60 p-8"
+				class="border border-[var(--terracotta)]/40 bg-[var(--paper)]/60 p-8"
 			>
 				<p
 					class="font-serif text-sm uppercase tracking-[0.3em] text-[var(--terracotta)]"
@@ -130,7 +130,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 
 			<!-- Clos Sainte-Marie -->
 			<div
-				class="border border-[var(--sage)]/25 bg-[var(--paper)]/60 p-8"
+				class="border border-[var(--terracotta)]/40 bg-[var(--paper)]/60 p-8"
 			>
 				<p
 					class="font-serif text-sm uppercase tracking-[0.3em] text-[var(--terracotta)]"
@@ -154,7 +154,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 
 			<!-- Rêve de Loire -->
 			<div
-				class="border border-[var(--sage)]/25 bg-[var(--paper)]/60 p-8"
+				class="border border-[var(--terracotta)]/40 bg-[var(--paper)]/60 p-8"
 			>
 				<p
 					class="font-serif text-sm uppercase tracking-[0.3em] text-[var(--terracotta)]"
@@ -257,106 +257,110 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 	</section>
 
 
-	<!-- ========================= -->
-	<!-- PROFITER DE LA RÉGION     -->
-	<!-- ========================= -->
+<!-- ========================= -->
+<!-- EXPLORE THE REGION        -->
+<!-- ========================= -->
 
-	<section class="pb-24">
-		<div class="text-center">
-			<p
-				class="font-serif text-sm uppercase tracking-[0.3em] text-[var(--terracotta)]"
-			>
-				If you’re staying a few days
-			</p>
+    <section class="relative overflow-visible pb-56 pt-4 sm:pb-64">
 
-			<h2
-				class="mt-4 font-serif text-4xl text-[var(--olive)]"
-			>
-				Explore the region
-			</h2>
+        <!-- Vineyard illustration -->
+        <img
+            src={`${base}/images/vignoble-loire.png`}
+            alt=""
+            aria-hidden="true"
+            class="pointer-events-none absolute -bottom-20 z-0
+            w-[280px] opacity-90
+            sm:w-[380px]
+            md:w-[480px]
+            lg:w-[560px]
+            left-[calc((100vw-100%)/-2)]"
+        />
 
-			<p
-				class="mx-auto mt-5 max-w-2xl leading-relaxed text-[var(--sage)]"
-			>
-				If you’d like to extend your stay, here are a few ideas for exploring the surrounding area and the Loire Valley châteaux.
-			</p>
-		</div>
-
-
-		<div class="mt-12 grid gap-6 md:grid-cols-3">
-
-			<!-- Chaumont -->
-			<div
-				class="border border-[var(--sage)]/25 bg-[var(--paper)]/60 p-8"
-			>
-				<p
-					class="font-serif text-sm uppercase tracking-[0.3em] text-[var(--terracotta)]"
-				>
-					Nearby
-				</p>
-
-				<h3
-					class="mt-3 font-serif text-3xl text-[var(--olive)]"
-				>
-					Chaumont-sur-Loire
-				</h3>
-
-				<p
-					class="mt-4 leading-relaxed text-[var(--sage)]"
-				>
-					Its château, gardens and the Domaine de Chaumont-sur-Loire are perfect for a day out.
-				</p>
-			</div>
+        <!-- Chambord sticky note -->
+        <img
+            src={`${base}/images/chambord-sticky.png`}
+            alt=""
+            aria-hidden="true"
+            class="pointer-events-none absolute
+            right-[calc((100vw-100%)/-2)]
+            top-[100px]
+            z-0
+            w-[260px]
+            sm:w-[340px]
+            md:w-[420px]
+            lg:w-[500px]"
+        />
 
 
-			<!-- Blois -->
-			<div
-				class="border border-[var(--sage)]/25 bg-[var(--paper)]/60 p-8"
-			>
-				<p
-					class="font-serif text-sm uppercase tracking-[0.3em] text-[var(--terracotta)]"
-				>
-					Town &amp; château
-				</p>
+        <div class="relative z-10">
+            <div class="text-center">
+                <p
+                    class="font-serif text-sm uppercase tracking-[0.3em] text-[var(--terracotta)]"
+                >
+                    If you’re staying a few days
+                </p>
 
-				<h3
-					class="mt-3 font-serif text-3xl text-[var(--olive)]"
-				>
-					Blois
-				</h3>
+                <h2
+                    class="mt-4 font-serif text-4xl text-[var(--olive)]"
+                >
+                    Explore the region
+                </h2>
 
-				<p
-					class="mt-4 leading-relaxed text-[var(--sage)]"
-				>
-					A lovely town on the Loire, ideal for lunch, a stroll through the historic centre and a visit to the royal château.
-				</p>
-			</div>
+                <p
+                    class="mx-auto mt-5 max-w-2xl leading-relaxed text-[var(--sage)]"
+                >
+                    If you’d like to extend your stay, here are a few ideas
+                    for exploring the surrounding area, the Loire Valley châteaux
+                    and some of the region’s specialities.
+                </p>
+            </div>
 
+            <div class="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                <!-- Chaumont -->
+                <div
+                    class="border border-[var(--sage)]/25 bg-[var(--paper)]/80 p-8"
+                >
+                    <p class="font-serif text-sm uppercase tracking-[0.3em] text-[var(--terracotta)]">Nearby</p>
+                    <h3 class="mt-3 font-serif text-3xl text-[var(--olive)]">Chaumont-sur-Loire</h3>
+                    <p class="mt-4 leading-relaxed text-[var(--sage)]">Its château, gardens and the Domaine de Chaumont-sur-Loire are perfect for a day out.</p>
+                </div>
 
-			<!-- Amboise -->
-			<div
-				class="border border-[var(--sage)]/25 bg-[var(--paper)]/60 p-8"
-			>
-				<p
-					class="font-serif text-sm uppercase tracking-[0.3em] text-[var(--terracotta)]"
-				>
-					Worth discovering
-				</p>
+                <!-- Blois -->
+                <div class="border border-[var(--sage)]/25 bg-[var(--paper)]/80 p-8">
+                    <p class="font-serif text-sm uppercase tracking-[0.3em] text-[var(--terracotta)]">Town &amp; château</p>
+                    <h3 class="mt-3 font-serif text-3xl text-[var(--olive)]">Blois</h3>
+                    <p class="mt-4 leading-relaxed text-[var(--sage)]">A lovely town on the Loire, ideal for lunch, a stroll through the historic centre and a visit to the royal château.</p>
+                </div>
 
-				<h3
-					class="mt-3 font-serif text-3xl text-[var(--olive)]"
-				>
-					Amboise
-				</h3>
+                <!-- Amboise -->
+                <div class="border border-[var(--sage)]/25 bg-[var(--paper)]/80 p-8">
+                    <p class="font-serif text-sm uppercase tracking-[0.3em] text-[var(--terracotta)]">Worth discovering</p>
+                    <h3 class="mt-3 font-serif text-3xl text-[var(--olive)]">Amboise</h3>
+                    <p class="mt-4 leading-relaxed text-[var(--sage)]">A beautiful stop on the Loire, with its château, charming streets and many restaurants.</p>
+                </div>
 
-				<p
-					class="mt-4 leading-relaxed text-[var(--sage)]"
-				>
-					A beautiful stop on the Loire, with its château, charming streets and many restaurants.
-				</p>
-			</div>
+                <!-- Chambord -->
+                <div class="border border-[var(--sage)]/25 bg-[var(--paper)]/80 p-8">
+                    <p class="font-serif text-sm uppercase tracking-[0.3em] text-[var(--terracotta)]">A must-see</p>
+                    <h3 class="mt-3 font-serif text-3xl text-[var(--olive)]">Château de Chambord</h3>
+                    <p class="mt-4 leading-relaxed text-[var(--sage)]">One of the Loire Valley’s most iconic châteaux, known for its Renaissance architecture, famous staircase and vast estate.</p>
+                </div>
 
-		</div>
-	</section>
+                <!-- Chenonceau -->
+                <div class="border border-[var(--sage)]/25 bg-[var(--paper)]/80 p-8">
+                    <p class="font-serif text-sm uppercase tracking-[0.3em] text-[var(--terracotta)]">On the Cher</p>
+                    <h3 class="mt-3 font-serif text-3xl text-[var(--olive)]">Château de Chenonceau</h3>
+                    <p class="mt-4 leading-relaxed text-[var(--sage)]">A château built across the River Cher and surrounded by gardens—a beautiful visit if you’d like to discover another side of the Loire Valley.</p>
+                </div>
+
+                <!-- Wine tasting -->
+                <div class="border border-[var(--sage)]/25 bg-[var(--paper)]/80 p-8">
+                    <p class="font-serif text-sm uppercase tracking-[0.3em] text-[var(--terracotta)]">Vineyards</p>
+                    <h3 class="mt-3 font-serif text-3xl text-[var(--olive)]">Wine tasting</h3>
+                    <p class="mt-4 leading-relaxed text-[var(--sage)]">Make the most of your stay by discovering Loire wines and visiting one of the region’s many vineyards. A tasting is a lovely way to spend a few hours between château visits.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
 </BaseLayout>

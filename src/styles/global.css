@@ -30,3 +30,27 @@ body {
 .font-script {
 	font-family: "Allura", cursive;
 }
+
+.editorial-card {
+	position: relative;
+	display: block;
+	border: 1px solid color-mix(in srgb, var(--sage) 30%, transparent);
+	background: color-mix(in srgb, var(--paper) 45%, transparent);
+	padding: 2rem;
+	text-align: left;
+	transition: background-color 250ms ease, border-color 250ms ease, transform 250ms ease;
+}
+
+.editorial-card:hover {
+	background: var(--terracotta);
+	border-color: var(--terracotta);
+	transform: translateY(-2px);
+}
+
+.editorial-card p {
+	transition: color 250ms ease;
+}
+
+.editorial-card:hover p {
+	color: white;
+}
